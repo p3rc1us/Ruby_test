@@ -16,7 +16,7 @@
 #    "goofy"
 #     ]
 #     if phrase.include?(element)
-#         puts "yes nandito si #{element}, nasa pang #{phrase.index(element)} sya" 
+        # puts "yes nandito si #{element}, nasa pang #{phrase.index(element)} sya" 
 #     else puts "wala siya dito"
 #     end
 # end
@@ -92,16 +92,6 @@
 
 # buzzBuzz
 
-        
-# puts "enter a color:"
-# color = gets.chomp()
-# puts "enter a plural noun:"
-# plural_noun = gets.chomp()
-# puts "enter your favorite celebrity:"
-# celebrity = gets.chomp()
-
-# print ("Roses are #{color}, #{plural_noun} are blue, I love #{celebrity}")
-
 
 # friends = Array.new
 # friends[0] = "kervy"
@@ -116,16 +106,16 @@
 # }
 # puts names["kervy"] #enter key which is kervy and value is maniego
 
-def cube(x)
-    x = x ** 3
-    puts x
-end
+# def cube(x)
+#     x = x ** 3
+#     puts x
+# end
 
-def max(num1, num2, num3)
-    [num1, num2, num3].max
-end
+# def max(num1, num2, num3)
+#     [num1, num2, num3].max
+# end
 
-puts max(12,44,44)
+# puts max(12,44,44)
 
 # def maxNumber(num1, num2, num3)
 #     x = num1, num2, num3
@@ -137,3 +127,41 @@ puts max(12,44,44)
 # end
 
 # maxNumber(12,44,32)
+
+# puts "enter a color:"
+# color = gets.chomp()
+# puts "enter a plural noun:"
+# plural_noun = gets.chomp()
+# puts "enter your favorite celebrity:"
+# celebrity = gets.chomp()
+
+# print ("Roses are #{color}, #{plural_noun} are blue, I love #{celebrity}")
+
+# #CLASS- defined as a custom Data Type
+# class Car
+#   attr_accessor :brand, :model, :price, :color
+# end
+
+# #Object- defined as an Instance of a Class
+# myCar = Car.new()
+# myCar.brand = "BMW"
+# myCar.model = "M4 Competition"
+# myCar.price = 5000000
+# myCar.color = "Blue"
+
+# puts myCar.brand
+
+class Toy
+    attr_accessor :color, :size, :name
+end
+
+myToy = Toy.new()
+
+puts "enter your toy color"
+myToy.color = gets.chomp()
+puts "enter the size of your toy"
+myToy.size = gets.chomp()
+puts "enter the name of your toy"
+myToy.name = gets.chomp()
+
+puts newToy = "my toy's color is #{myToy.color}, it's really #{myToy.size}. And it is a #{myToy.name}!"
