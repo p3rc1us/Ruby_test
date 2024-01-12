@@ -103,24 +103,37 @@
 # print ("Roses are #{color}, #{plural_noun} are blue, I love #{celebrity}")
 
 
-friends = Array.new
-friends[0] = "kervy"
-friends[5] = "jarvis"
+# friends = Array.new
+# friends[0] = "kervy"
+# friends[5] = "jarvis"
 
-himym = [1,2,3]
+# himym = [1,2,3]
 
-puts himym
+# puts himym
 
-names = {
-    "kervy" => "maniego"
-}
-puts names["kervy"]
+# names = {
+#     "kervy" => "maniego"
+# }
+# puts names["kervy"] #enter key which is kervy and value is maniego
 
 def cube(x)
     x = x ** 3
     puts x
 end
 
+def max(num1, num2, num3)
+    [num1, num2, num3].max
+end
 
-cube(3)
+puts max(12,44,44)
 
+# def maxNumber(num1, num2, num3)
+#     x = num1, num2, num3
+#         while x > x do
+#             puts x
+#         break
+#     end
+    
+# end
+
+# maxNumber(12,44,32)
