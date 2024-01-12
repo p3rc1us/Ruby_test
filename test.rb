@@ -103,13 +103,18 @@
 # print ("Roses are #{color}, #{plural_noun} are blue, I love #{celebrity}")
 
 
-# friends = Array.new
-# friends[0] = "kervy"
+friends = Array.new
+friends[0] = "kervy"
+friends[5] = "jarvis"
 
-# names = {
-#     "kervy" => "maniego"
-# }
-# puts names[2]
+himym = [1,2,3]
+
+puts himym
+
+names = {
+    "kervy" => "maniego"
+}
+puts names["kervy"]
 
 def cube(x)
     x = x ** 3
