@@ -168,28 +168,62 @@
 
 #---BUILDING A BETTER CALCULATOR---#
 
-puts "enter a number"
-num1 = gets.chomp().to_f
-puts "enter an operator"
-operator = gets.chomp()
-puts "enter a number"
-num2 = gets.chomp().to_f
+# puts "enter a number"
+# num1 = gets.chomp().to_f
+# puts "enter an operator"
+# operator = gets.chomp()
+# puts "enter a number"
+# num2 = gets.chomp().to_f
 
-if operator == "+"
-    result = num1 + num2
-    puts "your answer is #{result.to_f}"
-elsif operator == "-"
-    result = num1 - num2
-    puts "your answer is #{result.to_f}"
-elsif operator == "*"
-    result = num1 * num2
-    puts "your answer is #{result.to_f}"
-elsif operator == "/"
-    result = num1 / num2
-    puts "your answer is #{result.to_f}"
-elsif operator == "**"
-    result = num1 ** num2
-    puts "your answer is #{result.to_f}"
-else
-    puts "your answer is invalid, check your operator"
+# if operator == "+"
+#     result = num1 + num2
+#     puts "your answer is #{result.to_f}"
+# elsif operator == "-"
+#     result = num1 - num2
+#     puts "your answer is #{result.to_f}"
+# elsif operator == "*"
+#     result = num1 * num2
+#     puts "your answer is #{result.to_f}"
+# elsif operator == "/"
+#     result = num1 / num2
+#     puts "your answer is #{result.to_f}"
+# elsif operator == "**"
+#     result = num1 ** num2
+#     puts "your answer is #{result.to_f}"
+# else
+#     puts "your answer is invalid, check your operator"
+# end
+
+#---1. Write a Ruby program to check whether a value exists in an array.---
+def check(element)
+    original = ["Red", "Green", "Blue", "White"]
+
+    if original.include?(element)
+        puts true
+    else puts false
+    end
 end
+
+check "pink"
+
+#---2. Write a Ruby program to check whether 7 appears as either the first or last element in a given array. The array length must be 1 or more.
+def checkNumber(element)
+    numbers = [7, 8, 7, 3]
+
+    if numbers.index(element) == 0
+        puts true
+    elsif numbers.index(element) == 3
+        puts true
+    else puts false
+    end
+end
+
+checkNumber(7)
+
+#---3. Write a Ruby program to pick number of random elements from a given array.
+
+sample = ["purple", "pizza", "pinata", 10]
+
+random = rand(0..3)
+
+puts sample[random]
