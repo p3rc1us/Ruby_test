@@ -151,17 +151,45 @@
 
 # puts myCar.brand
 
-class Toy
-    attr_accessor :color, :size, :name
+# class Toy
+#     attr_accessor :color, :size, :name
+# end
+
+# myToy = Toy.new()
+
+# puts "enter your toy color"
+# myToy.color = gets.chomp()
+# puts "enter the size of your toy"
+# myToy.size = gets.chomp()
+# puts "enter the name of your toy"
+# myToy.name = gets.chomp()
+
+# puts newToy = "my toy's color is #{myToy.color}, it's really #{myToy.size}. And it is a #{myToy.name}!"
+
+#---BUILDING A BETTER CALCULATOR---#
+
+puts "enter a number"
+num1 = gets.chomp().to_f
+puts "enter an operator"
+operator = gets.chomp()
+puts "enter a number"
+num2 = gets.chomp().to_f
+
+if operator == "+"
+    result = num1 + num2
+    puts "your answer is #{result.to_f}"
+elsif operator == "-"
+    result = num1 - num2
+    puts "your answer is #{result.to_f}"
+elsif operator == "*"
+    result = num1 * num2
+    puts "your answer is #{result.to_f}"
+elsif operator == "/"
+    result = num1 / num2
+    puts "your answer is #{result.to_f}"
+elsif operator == "**"
+    result = num1 ** num2
+    puts "your answer is #{result.to_f}"
+else
+    puts "your answer is invalid, check your operator"
 end
-
-myToy = Toy.new()
-
-puts "enter your toy color"
-myToy.color = gets.chomp()
-puts "enter the size of your toy"
-myToy.size = gets.chomp()
-puts "enter the name of your toy"
-myToy.name = gets.chomp()
-
-puts newToy = "my toy's color is #{myToy.color}, it's really #{myToy.size}. And it is a #{myToy.name}!"
