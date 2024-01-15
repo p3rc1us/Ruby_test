@@ -234,11 +234,22 @@
 #---5. Write a Ruby program to compute the sum of elements in a given array.
 
 def sum
-
+    
     array = [1, 2, 3, 4, 5]
     
     puts array.sum
-    
+    # x = 0
+    # result = 0
+
+    # while x < array.length do
+    #     result += array[x]
+    #     x += 1
+        
+
+    # end
+
+    # puts result
+
 end
 
 sum
