@@ -237,20 +237,37 @@ def sum
     
     array = [1, 2, 3, 4, 5]
     
-    puts array.sum
-    # x = 0
-    # result = 0
+    # puts array.sum
 
-    # while x < array.length do
-    #     result += array[x]
-    #     x += 1
+    x = 0
+    result = 0
+
+    while x < array.length do
+        result += array[x]
+        x += 1
         
 
-    # end
+    end
 
-    # puts result
+    puts result
 
 end
 
 sum
+
+def sum2
+
+    array = [1, 2, 3, 4, 5]
+    
+    result = 0
+
+    array.each do |x|
+        result += x
+    end
+
+    puts result
+
+end
+
+sum2
 
