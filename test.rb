@@ -284,7 +284,7 @@ end
 identical
 
 def theSame(array)
-  puts array.uniq
-end
-
-theSame([1, 2, 3, 4, 1, 2, 2, 3, 5, 6])
+    puts array.uniq
+  end
+  
+  theSame([1, 2, 3, 4, 1, 2, 2, 3, 5, 6])
