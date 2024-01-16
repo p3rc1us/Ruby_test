@@ -270,21 +270,38 @@
 
 #---6. Write a Ruby program to remove duplicate elements from a given array.
 
-def identical
-    original = [1, 2, 3, 4, 1, 2, 2, 3, 5, 6]
+# def identical
+#     original = [1, 2, 3, 4, 1, 2, 2, 3, 5, 6]
 
-    duplicates = []
+#     duplicates = []
 
-    original.each do |x|
-        duplicates << x if original.count(x) >= 1
+#     original.each do |x|
+#         duplicates << x if original.count(x) >= 1
+#     end
+#     puts duplicates.uniq
+# end
+
+# identical
+
+# def theSame(array)
+#     puts array.uniq
+#   end
+  
+#   theSame([1, 2, 3, 4, 1, 2, 2, 3, 5, 6])
+
+#---7. Write a Ruby program to check two given arrays of integers and test 
+# whether they have the same first element or they have the same last element. Both arrays length must be 1 or more.
+
+def sameArray(arrayA, arrayB)
+
+    if arrayA.first == arrayB.first
+        puts "they both have #{arrayA[0]} at the beginning."
     end
-    puts duplicates.uniq
+    if arrayA.last == arrayB.last
+        puts "they both have #{arrayA[arrayA.length-1]} at the end."
+    end
+
 end
 
-identical
+sameArray([ 1, 2, 5 ],[ 1, 4, 5 ])
 
-def theSame(array)
-    puts array.uniq
-  end
-  
-  theSame([1, 2, 3, 4, 1, 2, 2, 3, 5, 6])
