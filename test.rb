@@ -233,41 +233,58 @@
 
 #---5. Write a Ruby program to compute the sum of elements in a given array.
 
-def sum
+# def sum
     
-    array = [1, 2, 3, 4, 5]
+#     array = [1, 2, 3, 4, 5]
     
-    # puts array.sum
+#      puts array.sum
 
-    x = 0
-    result = 0
+#     x = 0
+#     result = 0
 
-    while x < array.length do
-        result += array[x]
-        x += 1
-        
+#     while x < array.length do
+#         result += array[x]
+#         x += 1
+#     end
+#     puts result
+    
+# end
 
+# sum
+
+# def sum2
+
+#     array = [1, 2, 3, 4, 5]
+    
+#     result = 0
+
+#     array.each do |x|
+#         result += x
+#     end
+
+#     puts result
+
+# end
+
+# sum2
+
+#---6. Write a Ruby program to remove duplicate elements from a given array.
+
+def identical
+    original = [1, 2, 3, 4, 1, 2, 2, 3, 5, 6]
+
+    duplicates = []
+
+    original.each do |x|
+        duplicates << x if original.count(x) >= 1
     end
-
-    puts result
-
+    puts duplicates.uniq
 end
 
-sum
+identical
 
-def sum2
-
-    array = [1, 2, 3, 4, 5]
-    
-    result = 0
-
-    array.each do |x|
-        result += x
-    end
-
-    puts result
-
+def theSame(array)
+  puts array.uniq
 end
 
-sum2
-
+theSame([1, 2, 3, 4, 1, 2, 2, 3, 5, 6])
