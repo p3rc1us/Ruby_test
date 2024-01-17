@@ -326,8 +326,33 @@
 
 #---9. Write a Ruby program to compute the sum of all the elements. The array length must be 3 or more.
 
-def sum(array)
-    puts array.sum
+# def sum(array)
+#     puts array.sum
+# end
+
+# sum([1, 2, 3])
+
+#---10. Write a Ruby program to split a delimited string into an array.
+
+def modify(array)
+    puts array.split(", ")
 end
 
-sum([1, 2, 3])
+def modify_to_integer(array)
+
+    puts "im using map bang"
+    puts array.split(", ").map! { |y| y.to_i} 
+    
+    puts "im using for each"
+    array.split(", ").each do |x| 
+      x.to_i
+      
+      puts x
+      
+    end
+    
+end
+
+modify("Red, Green, Blue, White")
+
+modify_to_integer("1, 2, 3")
