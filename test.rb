@@ -308,18 +308,26 @@
 #---8. Write a Ruby program to remove blank elements from a given array.
 
 
-def killBlanks(array)
+# def killBlanks(array)
 
     # array.delete("")
 
-    array.each do |x|
-        if x === ""
-            array.delete_at(array.index(x))
-        end
-    end
+#     array.each do |x|
+#         if x === ""
+#             array.delete_at(array.index(x))
+#         end
+#     end
 
-    puts array
+#     puts array
 
+# end
+
+# killBlanks(["Red", "Green", "", "Blue", "White"])
+
+#---9. Write a Ruby program to compute the sum of all the elements. The array length must be 3 or more.
+
+def sum(array)
+    puts array.sum
 end
 
-killBlanks(["Red", "Green", "", "Blue", "White"])
+sum([1, 2, 3])
