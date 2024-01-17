@@ -310,13 +310,13 @@
 
 def killBlanks(array)
 
-    # array.each do |x|
-    #     if x === ""
-            
-    #     end
-    # end
+    # array.delete("")
 
-    array.delete("")
+    array.each do |x|
+        if x === ""
+            array.delete_at(array.index(x))
+        end
+    end
 
     puts array
 
