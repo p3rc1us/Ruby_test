@@ -292,16 +292,34 @@
 #---7. Write a Ruby program to check two given arrays of integers and test 
 # whether they have the same first element or they have the same last element. Both arrays length must be 1 or more.
 
-def sameArray(arrayA, arrayB)
+# def sameArray(arrayA, arrayB)
 
-    if arrayA.first == arrayB.first
-        puts "they both have #{arrayA[0]} at the beginning."
-    end
-    if arrayA.last == arrayB.last
-        puts "they both have #{arrayA[arrayA.length-1]} at the end."
-    end
+#     if arrayA.first == arrayB.first
+#         puts "they both have #{arrayA[0]} at the beginning."
+#     end
+#     if arrayA.last == arrayB.last
+#         puts "they both have #{arrayA[arrayA.length-1]} at the end."
+#     end
+
+# end
+
+# sameArray([ 1, 2, 5 ],[ 1, 4, 5 ])
+
+#---8. Write a Ruby program to remove blank elements from a given array.
+
+
+def killBlanks(array)
+
+    # array.each do |x|
+    #     if x === ""
+            
+    #     end
+    # end
+
+    array.delete("")
+
+    puts array
 
 end
 
-sameArray([ 1, 2, 5 ],[ 1, 4, 5 ])
-
+killBlanks(["Red", "Green", "", "Blue", "White"])
