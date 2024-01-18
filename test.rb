@@ -359,14 +359,23 @@
 
 #---11. Write a Ruby program to create an array with the elements "rotated left" of a given array of ints length 3.
 
-def rotate(arr)
+# def rotate(arr)
     
-    arr.rotate!
+#     arr.rotate!
+
+#     puts arr
+
+# end
+
+# rotate([1, 2, 3])
+
+def rotate(arr)
+
+    arr_first = arr.shift
+    arr.push(arr_first)
 
     puts arr
 
 end
 
 rotate([1, 2, 3])
-
-
