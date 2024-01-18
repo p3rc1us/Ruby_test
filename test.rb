@@ -361,9 +361,9 @@
 
 def rotate(arr)
     
-    rotated = arr.rotate
+    arr.rotate!
 
-    puts rotated
+    puts arr
 
 end
 
