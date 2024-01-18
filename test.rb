@@ -334,25 +334,39 @@
 
 #---10. Write a Ruby program to split a delimited string into an array.
 
-def modify(array)
-    puts array.split(", ")
+# def modify(array)
+#     puts array.split(", ")
+# end
+
+# def modify_to_integer(array)
+
+#     puts "im using map bang"
+#     puts array.split(", ").map! { |y| y.to_i} 
+    
+#     puts "im using for each"
+#     array.split(", ").each do |x| 
+#       x.to_i
+      
+#       puts x
+      
+#     end
+    
+# end
+
+# modify("Red, Green, Blue, White")
+
+# modify_to_integer("1, 2, 3")
+
+#---11. Write a Ruby program to create an array with the elements "rotated left" of a given array of ints length 3.
+
+def rotate(arr)
+    
+    rotated = arr.rotate
+
+    puts rotated
+
 end
 
-def modify_to_integer(array)
+rotate([1, 2, 3])
 
-    puts "im using map bang"
-    puts array.split(", ").map! { |y| y.to_i} 
-    
-    puts "im using for each"
-    array.split(", ").each do |x| 
-      x.to_i
-      
-      puts x
-      
-    end
-    
-end
 
-modify("Red, Green, Blue, White")
-
-modify_to_integer("1, 2, 3")
