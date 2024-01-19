@@ -431,3 +431,27 @@ end
 
 check_num(100)
 
+#--- 3.
+
+puts "type anything"
+answer = gets.chomp
+
+while answer != "STOP" do
+  puts "type anything"
+  answer = gets.chomp
+end
+
+#--- 4. 
+
+def divisible
+  arr = [6, 3, 1, 8, 4, 2, 10, 65, 102]
+  box = []
+  arr.each do |x|
+    if x % 2 == 0
+      box.push(x)
+    end
+  end
+  puts box
+end
+
+divisible
