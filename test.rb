@@ -369,13 +369,63 @@
 
 # rotate([1, 2, 3])
 
-def rotate(arr)
+# def rotate(arr)
 
-    arr_first = arr.shift
-    arr.push(arr_first)
+#     arr_first = arr.shift
+#     arr.push(arr_first)
 
-    puts arr
+#     puts arr
+
+# end
+
+# rotate([1, 2, 3])
+
+#---12. Write a Ruby program to create a new array with the elements in reverse order from a given an array of integers length 3.
+
+# def reversed(arr)
+
+#   new_array = arr.reverse
+
+#   x = arr
+
+#   puts "this it the original array #{arr}"
+#   puts "this is the reversed one #{new_array}"
+
+# end
+
+# reversed([1, 2, 3])
+
+#---Sir Abdul excercise 5. We have given you an array and a number. Write a program that checks to see if the number appears in the array.
+def check
+  arr = [1, 3, 5, 7, 9, 11]
+  number = 3
+  
+  arr.include?(number)
+  puts "yes #{number} is here!"
+    
+end
+
+check
+
+#---Sir Abdul excercise 6. Write a program that takes a number from the user between 0 and 100 and reports back whether the number is between 0 and 50, 51 and 100, or above 100
+
+def check_num(x)
+  
+  if (x > 0 && x < 100)
+    if (x < 50)
+      puts "between 0-50"
+    elsif (x > 51)
+      puts "between 51-100"
+    else puts "input between 0-50 and 51-100 only"
+      
+    end
+
+  elsif (x = 0 && x = 100)
+    puts "invalid number"
+
+  else puts "above 100"
+  end
 
 end
 
-rotate([1, 2, 3])
+check_num(51)
