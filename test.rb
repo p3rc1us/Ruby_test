@@ -421,7 +421,7 @@ def check_num(x)
       
     end
 
-  elsif (x = 0 && x = 100)
+  elsif (x == 0 || x == 100)
     puts "invalid number"
 
   else puts "above 100"
@@ -429,4 +429,5 @@ def check_num(x)
 
 end
 
-check_num(51)
+check_num(100)
+
