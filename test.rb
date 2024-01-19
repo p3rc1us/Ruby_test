@@ -396,6 +396,7 @@
 # reversed([1, 2, 3])
 
 #---Sir Abdul excercise 5. We have given you an array and a number. Write a program that checks to see if the number appears in the array.
+
 def check
   arr = [1, 3, 5, 7, 9, 11]
   number = 3
