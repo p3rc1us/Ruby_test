@@ -485,17 +485,17 @@
 
 # square(678)
 
-def squared(num)
-  for x in (1..num)
-    if x * x == num
-      return puts "true kwan yan, perfect square #{num}"
-    end
-    x += 1
-  end
-  puts "false hindi yan kwan, perfect square"
-end
+# def squared(num)
+#   for x in (1..num)
+#     if x * x == num
+#       return puts "true kwan yan, perfect square #{num}"
+#     end
+#     x += 1
+#   end
+#   puts "false hindi yan kwan, perfect square"
+# end
 
-squared(4)
+# squared(4)
 
 
 # def square_num(num)
@@ -509,3 +509,18 @@ squared(4)
 
 
 # square_num(26)
+
+def smallest(arr)
+
+  return puts "invalid array" if arr.empty? || arr.length == 1
+
+  minimum = arr[0]
+
+  arr[1..-1].each do |element|
+    minimum = element if element < minimum
+  end
+
+  puts minimum
+end
+
+smallest([6, 5, 12, -23, 87, 25, 25, 0])
