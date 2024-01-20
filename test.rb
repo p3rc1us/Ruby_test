@@ -397,61 +397,115 @@
 
 #---Sir Abdul excercise 5. We have given you an array and a number. Write a program that checks to see if the number appears in the array.
 
-def check
-  arr = [1, 3, 5, 7, 9, 11]
-  number = 3
+# def check
+#   arr = [1, 3, 5, 7, 9, 11]
+#   number = 3
   
-  arr.include?(number)
-  puts "yes #{number} is here!"
+#   arr.include?(number)
+#   puts "yes #{number} is here!"
     
-end
+# end
 
-check
+# check
 
-#---Sir Abdul excercise 6. Write a program that takes a number from the user between 0 and 100 and reports back whether the number is between 0 and 50, 51 and 100, or above 100
+#---Sir Abdul excercise 6. Write a program that takes a number from the user between 0 and 100 
+# and reports back whether the number is between 0 and 50, 51 and 100, or above 100
 
-def check_num(x)
+# def check_num(x)
   
-  if (x > 0 && x < 100)
-    if (x < 50)
-      puts "between 0-50"
-    elsif (x > 51)
-      puts "between 51-100"
-    else puts "input between 0-50 and 51-100 only"
+#   if (x > 0 && x < 100)
+
+#     if (x < 50)
+#       puts "between 0-50"
+#     elsif (x > 51)
+#       puts "between 51-100"
+#     else puts "input between 0-50 and 51-100 only"
       
-    end
+#     end
 
-  elsif (x == 0 || x == 100)
-    puts "invalid number"
+#   elsif (x == 0 || x == 100)
+#     puts "invalid number"
 
-  else puts "above 100"
-  end
+#   else puts "above 100"
+#   end
 
-end
+# end
 
-check_num(100)
+# check_num(100)
 
 #--- 3.
 
-puts "type anything"
-answer = gets.chomp
+# puts "type anything"
+# answer = gets.chomp
 
-while answer != "STOP" do
-  puts "type anything"
-  answer = gets.chomp
-end
+# while answer != "STOP" do
+#   puts "type anything"
+#   answer = gets.chomp
+# end
+
+# def stahp
+#   begin
+#     puts "type anything"
+#     answer = gets.chomp
+#   end while answer != "STOP"
+# end
+
+# stahp
+
+# END WHILE means “keep performing this action as long as a certain condition is met”.-----
 
 #--- 4. 
 
-def divisible
-  arr = [6, 3, 1, 8, 4, 2, 10, 65, 102]
-  box = []
-  arr.each do |x|
-    if x % 2 == 0
-      box.push(x)
+# def divisible
+#   arr = [6, 3, 1, 8, 4, 2, 10, 65, 102]
+#   box = []
+#   arr.each do |x|
+#     if x % 2 == 0
+#       box.push(x)
+#     end
+#   end
+#   puts box
+# end
+
+# divisible
+
+# def square(num)
+  
+#   x = 1
+
+#   while x <= num
+#     if x * x == num
+#       return puts "true kwan yan, perfect square"
+#     end
+#     x += 1
+#   end
+#   puts "false hindi yan kwan, perfect square"
+  
+# end
+
+# square(678)
+
+def squared(num)
+  for x in (1..num)
+    if x * x == num
+      return puts "true kwan yan, perfect square #{num}"
     end
+    x += 1
   end
-  puts box
+  puts "false hindi yan kwan, perfect square"
 end
 
-divisible
+squared(4)
+
+
+# def square_num(num)
+#   x = 1
+#   begin
+#     answer = x * x
+#     x += 1
+#   end while answer != num
+#   puts "square na iyan po"
+# end
+
+
+# square_num(26)
