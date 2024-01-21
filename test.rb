@@ -510,17 +510,50 @@
 
 # square_num(26)
 
-def smallest(arr)
+# def smallest(arr)
 
-  return puts "invalid array" if arr.empty? || arr.length == 1
+#   return puts "invalid array" if arr.empty? || arr.length == 1
 
-  minimum = arr[0]
+#   minimum = arr[0]
 
-  arr[1..-1].each do |x|
-    minimum = x if x < minimum
+#   arr[1..-1].each do |x|
+#     minimum = x if x < minimum
+#   end
+
+#   puts minimum
+# end
+
+# smallest([6, 5, 12, -23, 87, 25, 25, 0])
+
+
+
+class Profile
+  attr_accessor :full_name, :age, :address, :work
+
+  def initialize(full_name, age, address, work)
+    @full_name = full_name
+    @age = age
+    @address =  address
+    @work = work
   end
-
-  puts minimum
 end
 
-smallest([6, 5, 12, -23, 87, 25, 25, 0])
+
+describe 'Profile' do
+  it 'has getters and setters' do
+    my_profile = Profile.new('Juan', 18, 'Bulacan', 'Instructor')
+
+    expect(my_profile.full_name).to eq('Juan')
+
+    my_profile.full_name = 'Juan Cruz'
+
+    expect(my_profile.full_name).to eq('Juan Cruz')
+    
+    my_profile.age = 25
+    my_profile.work = 'Software Engineer'
+
+    expect(my_profile.age).to eq(25)
+    expect(my_profile.work).to eq('Software Engineer')
+  end
+end
+
