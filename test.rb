@@ -516,8 +516,8 @@ def smallest(arr)
 
   minimum = arr[0]
 
-  arr[1..-1].each do |element|
-    minimum = element if element < minimum
+  arr[1..-1].each do |x|
+    minimum = x if x < minimum
   end
 
   puts minimum
