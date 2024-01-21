@@ -539,21 +539,56 @@ class Profile
 end
 
 
-describe 'Profile' do
-  it 'has getters and setters' do
-    my_profile = Profile.new('Juan', 18, 'Bulacan', 'Instructor')
+# describe 'Profile' do
+#   it 'has getters and setters' do
+#     my_profile = Profile.new('Juan', 18, 'Bulacan', 'Instructor')
 
-    expect(my_profile.full_name).to eq('Juan')
+#     expect(my_profile.full_name).to eq('Juan')
 
-    my_profile.full_name = 'Juan Cruz'
+#     my_profile.full_name = 'Juan Cruz'
 
-    expect(my_profile.full_name).to eq('Juan Cruz')
+#     expect(my_profile.full_name).to eq('Juan Cruz')
     
-    my_profile.age = 25
-    my_profile.work = 'Software Engineer'
+#     my_profile.age = 25
+#     my_profile.work = 'Software Engineer'
 
-    expect(my_profile.age).to eq(25)
-    expect(my_profile.work).to eq('Software Engineer')
+#     expect(my_profile.age).to eq(25)
+#     expect(my_profile.work).to eq('Software Engineer')
+#   end
+# end
+
+#---- Activity
+
+class Pet
+  attr_reader :name, :breed, :size
+  attr_accessor :owner
+
+  def initialize(name, breed, size, owner)
+    @name = name
+    @breed = breed
+    @size = size
+    @owner = owner
+  end
+
+
+  def bark
+    puts "#{name} the #{breed} is barking, Arf! Arf!"
+  end
+
+  def adopt
+    if @owner == ""
+      puts "Please type your name as the new owner of #{name}, the #{size} #{breed}."
+      
+    else puts "Sorry, #{name} is not available for adoption."
+    end
+    @owner = gets.chomp
+    puts @owner + " has adopted #{name}!"
   end
 end
 
+charlie = Pet.new("Charlie", "Goldendoodle", "Big", "Damien")
+lucel = Pet.new("Lucel", "Cocker Spaniel", "Small", "")
+turbo = Pet.new("Turbo", "Border Collie", "Medium", "Sherly")
+
+
+lucel.bark
