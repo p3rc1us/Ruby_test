@@ -575,6 +575,10 @@ class Pet
     puts "#{name} the #{breed} is barking, Arf! Arf!"
   end
 
+  # def new_name=(new_name)
+  #   @name = new_name
+  # end
+
   def adopt
     if @owner == ""
 
@@ -598,4 +602,5 @@ charlie = Pet.new("Charlie", "Goldendoodle", "Big", "Damien")
 lucel = Pet.new("Lucel", "Cocker Spaniel", "Small", "")
 turbo = Pet.new("Turbo", "Border Collie", "Medium", "Sherly")
 
-puts Pet@name
+# puts charlie.new_name = "charizard"
+puts charlie.name
