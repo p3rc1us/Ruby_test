@@ -559,48 +559,97 @@ end
 
 #---- Activity
 
-class Pet
-  attr_reader :name, :breed, :size
-  attr_accessor :owner
+# class Pet
+#   attr_reader :name, :breed, :size
+#   attr_accessor :owner
 
-  def initialize(name, breed, size, owner)
-    @name = name
-    @breed = breed
-    @size = size
-    @owner = owner
-  end
+#   def initialize(name, breed, size, owner)
+#     @name = name
+#     @breed = breed
+#     @size = size
+#     @owner = owner
+#   end
 
 
-  def bark
-    puts "#{name} the #{breed} is barking, Arf! Arf!"
-  end
+#   def bark
+#     puts "#{name} the #{breed} is barking, Arf! Arf!"
+#   end
 
   # def new_name=(new_name)
   #   @name = new_name
   # end
 
-  def adopt
-    if @owner == ""
+#   def adopt
+#     if @owner == ""
 
-      puts "Please type your name as the new owner of #{name}, the #{size} #{breed}."
-      @owner = gets.chomp
+#       puts "Please type your name as the new owner of #{name}, the #{size} #{breed}."
+#       @owner = gets.chomp
       
-        begin
-            puts "Please type an appropriate name."
-            @owner = gets.chomp
-        end while @owner == ""
+#         begin
+#             puts "Please type an appropriate name."
+#             @owner = gets.chomp
+#         end while @owner == ""
       
-      puts @owner + " has adopted #{name}!"
+#       puts @owner + " has adopted #{name}!"
 
-    else puts "Sorry, #{name} is not available for adoption."
+#     else puts "Sorry, #{name} is not available for adoption."
 
-    end
+#     end
+#   end
+# end
+
+# charlie = Pet.new("Charlie", "Goldendoodle", "Big", "Damien")
+# lucel = Pet.new("Lucel", "Cocker Spaniel", "Small", "")
+# turbo = Pet.new("Turbo", "Border Collie", "Medium", "Sherly")
+
+# puts charlie.new_name = "charizard"
+# puts charlie.name
+
+#----------------- Inheritance -----------------------#
+
+# class Animal
+#   def speak
+#     "Hello! from superclass"
+#   end
+# end
+
+# class GoodDog < Animal
+#   def speak
+#     super + ", I'm from GoodDog subclass"
+#   end
+# end
+
+# sparky = GoodDog.new
+# puts sparky.speak
+
+# class Animal
+#   attr_accessor :name #with this only being :name, it means ".name" is the only thin accessible.
+
+#   def initialize(name) #this is also an example that you wanted name to be access generally by using super(name)
+#     @name = name
+#   end
+# end
+
+# class GoodDog < Animal  #this is an example where you only want @color in a specific class and not in general.
+#   def initialize(name, color)
+#     super(name)
+#     @color = color
+#   end
+# end
+
+# bruno = GoodDog.new("bruno", "brown")
+# puts bruno.inspect
+
+class Animal
+  def initialize
   end
 end
 
-charlie = Pet.new("Charlie", "Goldendoodle", "Big", "Damien")
-lucel = Pet.new("Lucel", "Cocker Spaniel", "Small", "")
-turbo = Pet.new("Turbo", "Border Collie", "Medium", "Sherly")
+class Bear < Animal
+  def initialize(color)
+    super()
+    @color = color
+  end
+end
 
-# puts charlie.new_name = "charizard"
-puts charlie.name
+bear = Bear.new("black")        # => #<Bear:0x007fb40b1e6718 @color="black">
