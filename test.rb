@@ -577,12 +577,20 @@ class Pet
 
   def adopt
     if @owner == ""
+
       puts "Please type your name as the new owner of #{name}, the #{size} #{breed}."
+      @owner = gets.chomp
       
+        begin
+            puts "Please type an appropriate name."
+            @owner = gets.chomp
+        end while @owner == ""
+      
+      puts @owner + " has adopted #{name}!"
+
     else puts "Sorry, #{name} is not available for adoption."
+
     end
-    @owner = gets.chomp
-    puts @owner + " has adopted #{name}!"
   end
 end
 
@@ -590,5 +598,4 @@ charlie = Pet.new("Charlie", "Goldendoodle", "Big", "Damien")
 lucel = Pet.new("Lucel", "Cocker Spaniel", "Small", "")
 turbo = Pet.new("Turbo", "Border Collie", "Medium", "Sherly")
 
-
-lucel.bark
+puts Pet@name
