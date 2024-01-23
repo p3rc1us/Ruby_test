@@ -717,5 +717,13 @@ class Animal
   end
 end
 
-kervy = Animal.new
-puts Animal.ancestors
+class GoodDog < Animal
+  include Swimmable
+  include Climbable
+end
+
+puts "---GoodDog method lookup---"
+puts GoodDog.ancestors
+
+# kervy = Animal.new
+# puts Animal.ancestors
