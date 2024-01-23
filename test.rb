@@ -718,4 +718,4 @@ class Animal
 end
 
 kervy = Animal.new
-puts kervy.speak + kervy.walk
+puts Animal.ancestors
