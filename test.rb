@@ -606,6 +606,7 @@ end
 # puts charlie.name
 
 #----------------- Inheritance -----------------------#
+#  -inheriting behavior from one class to another.
 
 # class Animal
 #   def speak
@@ -640,16 +641,81 @@ end
 # bruno = GoodDog.new("bruno", "brown")
 # puts bruno.inspect
 
+# class Animal
+#   def initialize
+#   end
+# end
+
+# class Bear < Animal
+#   def initialize(color)
+#     super()
+#     @color = color
+#   end
+# end
+
+# bear = Bear.new("black")        # => #<Bear:0x007fb40b1e6718 @color="black">
+
+#------- Mixing in Modules -----#
+
+# module Swimmable
+#   def swim
+#     "I'm swimming"
+#   end
+# end
+
+# class Animal
+# include Swimmable
+# end
+
+# class Mammal < Animal
+# end
+
+# class Fish < Animal
+# include Swimmable
+# end
+
+# class Dog < Mammal
+# include Swimmable
+# end
+
+# class Cat < Mammal
+# end
+
+# doggy = Dog.new
+# catto = Cat.new
+# human = Animal.new
+
+# puts doggy.swim
+# puts catto
+# puts human.swim
+
+#---- modules and class inheritance ---#
+
+module Walkable
+  def walk
+    "I'm walking."
+  end
+end
+
+module Swimmable
+  def swim
+    "I'm swimming."
+  end
+end
+
+module Climbable
+  def climb
+    "I'm climbing."
+  end
+end
+
 class Animal
-  def initialize
+  include Walkable
+
+  def speak
+    "I'm an animal, and I speak!"
   end
 end
 
-class Bear < Animal
-  def initialize(color)
-    super()
-    @color = color
-  end
-end
-
-bear = Bear.new("black")        # => #<Bear:0x007fb40b1e6718 @color="black">
+kervy = Animal.new
+puts kervy.speak + kervy.walk
