@@ -636,10 +636,14 @@ end
 #     super(name)
 #     @color = color
 #   end
+
+#   def bark
+#     puts name
+#   end
 # end
 
 # bruno = GoodDog.new("bruno", "brown")
-# puts bruno.inspect
+# puts bruno.bark
 
 # class Animal
 #   def initialize
@@ -691,39 +695,105 @@ end
 
 #---- modules and class inheritance ---#
 
-module Walkable
-  def walk
-    "I'm walking."
-  end
-end
+# module Walkable
+#   def walk
+#     "I'm walking."
+#   end
+# end
 
-module Swimmable
-  def swim
-    "I'm swimming."
-  end
-end
+# module Swimmable
+#   def swim
+#     "I'm swimming."
+#   end
+# end
 
-module Climbable
-  def climb
-    "I'm climbing."
-  end
-end
+# module Climbable
+#   def climb
+#     "I'm climbing."
+#   end
+# end
 
-class Animal
-  include Walkable
+# class Animal
+#   include Walkable
 
-  def speak
-    "I'm an animal, and I speak!"
-  end
-end
+#   def speak
+#     "I'm an animal, and I speak!"
+#   end
+# end
 
-class GoodDog < Animal
-  include Swimmable
-  include Climbable
-end
+# class GoodDog < Animal
+#   include Swimmable
+#   include Climbable
+# end
 
-puts "---GoodDog method lookup---"
-puts GoodDog.ancestors
+# puts "---GoodDog method lookup---"
+# puts GoodDog.ancestors
 
 # kervy = Animal.new
 # puts Animal.ancestors
+
+# ------------------------------------------ Exercise  -------------------------------------------------- #
+# 1. Create a superclass called Vehicle for your MyCar class to inherit from and move the behavior that isn't specific to the MyCar class to the superclass. 
+# Create a constant in your MyCar class that stores information about the vehicle that makes it different from other types of Vehicles.
+# Then create a new class called MyTruck that inherits from your superclass that also has a constant defined that separates it from the MyCar class in some way.
+
+# class Vehicle
+
+#   attr_accessor :name
+#   def initialize(name)
+#     @name = name
+#   end
+
+#   def rev(name)
+#     puts "#{name} vroom! vroom!"
+#   end
+# end
+
+# class MyCar < Vehicle
+#   wheels = 4
+  
+# end
+
+# class MyTruck < Vehicle
+#   wheels = 18
+# end
+
+# my_car = MyCar.new("rory")
+# puts my_car.rev("rory")
+
+# 2. Add a class variable to your superclass that can keep track of the number of objects created that inherit from the superclass. 
+# Create a method to print out the value of this class variable as well.
+
+
+class Vehicle
+@@number_vehicles = 0
+
+attr_accessor :name
+
+def initialize(name)
+  @@number_vehicles += 1
+  @name = name
+end
+
+def self.number_vehicles
+  @@number_vehicles
+end
+
+def rev
+  puts "vroom! vroom!"
+end
+end
+  
+class MyCar < Vehicle
+  wheels = 4
+    
+end
+  
+class MyTruck < Vehicle
+  wheels = 18
+end
+  
+rory = MyCar.new("Rory")
+bob = MyTruck.new("Bob")
+puts Vehicle.number_vehicles
+
