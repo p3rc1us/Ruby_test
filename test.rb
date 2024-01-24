@@ -765,36 +765,56 @@ end
 # Create a method to print out the value of this class variable as well.
 
 
-class Vehicle
-@@number_vehicles = 0
+# class Vehicle
+# @@number_vehicles = 0
 
-attr_accessor :name
+# attr_accessor :name
 
-def initialize(name)
-  @@number_vehicles += 1
-  @name = name
-end
+# def initialize(name)
+#   @@number_vehicles += 1
+#   @name = name
+# end
 
-def self.number_vehicles
-  @@number_vehicles
-end
+# def self.number_vehicles
+#   @@number_vehicles
+# end
 
-def rev
-  puts "vroom! vroom!"
-end
-end
+# def rev
+#   puts "vroom! vroom!"
+# end
+# end
   
-class MyCar < Vehicle
-  wheels = 4
+# class MyCar < Vehicle
+#   wheels = 4
     
-end
+# end
   
-class MyTruck < Vehicle
-  wheels = 18
-end
+# class MyTruck < Vehicle
+#   wheels = 18
+# end
   
-rory = MyCar.new("Rory")
-bob = MyTruck.new("Bob")
+# rory = MyCar.new("Rory")
+# bob = MyTruck.new("Bob")
 
-puts Vehicle.number_vehicles
+# puts Vehicle.number_vehicles
 
+class Engine
+  def start
+    puts "Ignition started. Fuel injection and spark plugs activated."
+  end
+end
+
+class CarWithAbstraction
+  def initialize(engine)
+    @engine = engine
+  end
+
+  def drive
+    @engine.start
+    puts "Car is moving."
+  end
+end
+
+my_engine = Engine.new
+my_car_with_abstraction = CarWithAbstraction.new(my_engine)
+my_car_with_abstraction.drive
