@@ -795,5 +795,6 @@ end
   
 rory = MyCar.new("Rory")
 bob = MyTruck.new("Bob")
+
 puts Vehicle.number_vehicles
 
