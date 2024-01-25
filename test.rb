@@ -826,30 +826,56 @@ end
 
 # 1. Create your own Object with attributes and methods.
 
-class Vehicle
+# class Vehicle
 
-attr_accessor :name
+# attr_accessor :name
 
-def initialize(name)
-  @name = name
-end
+# def initialize(name)
+#   @name = name
+# end
 
-def rev
-  puts "vroom! vroom!"
-end
-end
+# def rev
+#   puts "vroom! vroom!"
+# end
+# end
 
-class MyCar < Vehicle
-  def whillie
-    puts "I'm about to fly"
+# class MyCar < Vehicle
+#   def whillie
+#     puts "I'm about to fly"
+#   end
+# end
+
+# class MyTruck < Vehicle
+# end
+
+# my_car = MyCar.new("rory")
+# puts my_car.rev
+# puts my_car.whillie
+
+# 2. Provide the missing code here: https://www.codepile.net/pile/LZP8OpJx.
+
+class Profile
+
+  attr_accessor :full_name, :age, :address, :work
+
+  def initialize(full_name, age, address, work)
+    @full_name = full_name
+    @age = age
+    @address = address
+    @work = work
   end
 end
 
-class MyTruck < Vehicle
-end
+my_profile = Profile.new('Juan', 18, 'Bulacan', 'Instructor')
 
-my_car = MyCar.new("rory")
-puts my_car.rev
-puts my_car.whillie
+puts my_profile.full_name
+my_profile.full_name = 'Juan Cruz'
 
+my_profile.age = 25
+my_profile.work = 'Software Engineer'
+
+puts my_profile.full_name
+puts my_profile.age
+puts my_profile.work
+puts my_profile.address
 
