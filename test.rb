@@ -798,23 +798,58 @@ end
 
 # puts Vehicle.number_vehicles
 
-class Engine
-  def start
-    puts "Ignition started. Fuel injection and spark plugs activated."
+# class Engine
+#   def start
+#     puts "Ignition started. Fuel injection and spark plugs activated."
+#   end
+# end
+
+# class CarWithAbstraction
+#   def initialize(engine)
+#     @engine = engine
+#   end
+
+#   def drive
+#     @engine.start
+#     puts "Car is moving."
+#   end
+# end
+
+# my_engine = Engine.new
+# my_car_with_abstraction = CarWithAbstraction.new(my_engine)
+# my_car_with_abstraction.drive
+
+#protected can still be access thru the method inside with the private method
+
+
+#--------------------- Grouped together ACTIVITIES --------------------------------#
+
+# 1. Create your own Object with attributes and methods.
+
+class Vehicle
+
+attr_accessor :name
+
+def initialize(name)
+  @name = name
+end
+
+def rev
+  puts "vroom! vroom!"
+end
+end
+
+class MyCar < Vehicle
+  def whillie
+    puts "I'm about to fly"
   end
 end
 
-class CarWithAbstraction
-  def initialize(engine)
-    @engine = engine
-  end
-
-  def drive
-    @engine.start
-    puts "Car is moving."
-  end
+class MyTruck < Vehicle
 end
 
-my_engine = Engine.new
-my_car_with_abstraction = CarWithAbstraction.new(my_engine)
-my_car_with_abstraction.drive
+my_car = MyCar.new("rory")
+puts my_car.rev
+puts my_car.whillie
+
+
