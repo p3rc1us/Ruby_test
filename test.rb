@@ -854,28 +854,56 @@ end
 
 # 2. Provide the missing code here: https://www.codepile.net/pile/LZP8OpJx.
 
-class Profile
 
-  attr_accessor :full_name, :age, :address, :work
 
-  def initialize(full_name, age, address, work)
-    @full_name = full_name
-    @age = age
-    @address = address
-    @work = work
+# class Profile
+
+#   attr_accessor :full_name, :age, :address, :work
+
+#   def initialize(full_name, age, address, work)
+#     @full_name = full_name
+#     @age = age
+#     @address = address
+#     @work = work
+#   end
+# end
+
+# my_profile = Profile.new('Juan', 18, 'Bulacan', 'Instructor')
+
+# puts my_profile.full_name
+# my_profile.full_name = 'Juan Cruz'
+
+# my_profile.age = 25
+# my_profile.work = 'Software Engineer'
+
+# puts my_profile.full_name
+# puts my_profile.age
+# puts my_profile.work
+# puts my_profile.address
+
+# 3. We have a Confection class representing baked desserts. Your job is to create a new subclass of Confection, named Cupcake and Banana Cake. 
+# Cupcakes and Banana Cakes need to be baked just like other confections, but cupcakes also need to be frosted afterward. Write a prepare method 
+# for your Cupcake and Banana Cake class that prints ‘Baking at 350 degrees for 25 minutes.’, and then prints ‘Applying frosting’ for Cupcake only.
+
+
+class Confection
+  def baking
+    "Baking at 350 degrees for 25 minutes."
   end
 end
 
-my_profile = Profile.new('Juan', 18, 'Bulacan', 'Instructor')
+class EggPie < Confection;end
 
-puts my_profile.full_name
-my_profile.full_name = 'Juan Cruz'
+class Cupcake <  Confection
+  def frosting
+    "Applying frosting"
+  end
 
-my_profile.age = 25
-my_profile.work = 'Software Engineer'
+end
 
-puts my_profile.full_name
-puts my_profile.age
-puts my_profile.work
-puts my_profile.address
+class BananaCake < Confection;end
 
+strawberry = Cupcake.new
+
+puts strawberry.baking
+puts strawberry.frosting
