@@ -1001,30 +1001,67 @@ end
 
 # 5. Create an Object that implements Abstraction.
 
-class Membership
+# class Membership
 
-  def initialize(name, age, vip=false)
-    @name = name
-    @age  =  age
-    @vip = vip
+#   def initialize(name, age, vip=false)
+#     @name = name
+#     @age  =  age
+#     @vip = vip
+#   end
+
+#   def bought_vip
+#     vip
+#   end
+
+#   private
+
+#   def vip
+#     @vip = true
+#     "VIP"
+#   end
+# end
+
+# sir_libnez  = Membership.new("Libnez", 54)
+
+# puts sir_libnez.inspect
+# puts sir_libnez.bought_vip
+# puts sir_libnez.inspect
+
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------#
+
+
+#  6. Create Objects that implements Polymorphism and Duck-typing
+
+class Orchestra
+  def initialize(instrument_name, sound)
+    @instrument = instrument_name
+    @sound = sound
   end
 
-  def bought_vip
-    vip
-  end
-
-  private
-
-  def vip
-    @vip = true
-    "VIP"
+  def play
+    "That #{@sound} sound is like a #{@instrument}..."
   end
 end
 
-sir_libnez  = Membership.new("Libnez", 54)
+  class Violin < Orchestra
+    def initialize(instrument_name)
+    super(instrument_name, "OoO EeE OoO")
+    end
+  end
 
-puts sir_libnez.inspect
-puts sir_libnez.bought_vip
-puts sir_libnez.inspect
+  class Piano < Orchestra
+    def initialize(instrument_name)
+    super(instrument_name, "DUN DUN DUN")
+    end
+  end
+
+
+steinway = Piano.new("Steinway & Sons")
+stradivarius = Violin.new("Stradivarius")
+
+puts steinway.play
+puts stradivarius.play
+
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------#
+
