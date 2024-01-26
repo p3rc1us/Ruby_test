@@ -981,21 +981,50 @@ end
 
 # 4. Create an object that implements encapsulation.
 
-class Children
-  def initialize(eldest_age, youngest_age)
-    @eldest_age = eldest_age
-    @youngest_age = youngest_age
-  end
+# class Children
+#   def initialize(eldest_age, youngest_age)
+#     @eldest_age = eldest_age
+#     @youngest_age = youngest_age
+#   end
 
-  def age_gap
-    @eldest_age - @youngest_age
-  end
-end
+#   def age_gap
+#     @eldest_age - @youngest_age
+#   end
+# end
 
-smith_siblings = Children.new(25, 17)
-puts smith_siblings.age_gap
+# smith_siblings = Children.new(25, 17)
+# puts smith_siblings.age_gap
 
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------#
 
 
+# 5. Create an Object that implements Abstraction.
+
+class Membership
+
+  def initialize(name, age, vip=false)
+    @name = name
+    @age  =  age
+    @vip = vip
+  end
+
+  def bought_vip
+    vip
+  end
+
+  private
+
+  def vip
+    @vip = true
+    "VIP"
+  end
+end
+
+sir_libnez  = Membership.new("Libnez", 54)
+
+puts sir_libnez.inspect
+puts sir_libnez.bought_vip
+puts sir_libnez.inspect
+
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------#
