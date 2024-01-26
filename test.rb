@@ -852,6 +852,8 @@ end
 # puts my_car.rev
 # puts my_car.whillie
 
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------#
+
 # 2. Provide the missing code here: https://www.codepile.net/pile/LZP8OpJx.
 
 
@@ -881,29 +883,119 @@ end
 # puts my_profile.work
 # puts my_profile.address
 
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------#
+
 # 3. We have a Confection class representing baked desserts. Your job is to create a new subclass of Confection, named Cupcake and Banana Cake. 
 # Cupcakes and Banana Cakes need to be baked just like other confections, but cupcakes also need to be frosted afterward. Write a prepare method 
 # for your Cupcake and Banana Cake class that prints ‘Baking at 350 degrees for 25 minutes.’, and then prints ‘Applying frosting’ for Cupcake only.
 
 
-class Confection
-  def baking
-    "Baking at 350 degrees for 25 minutes."
+# class Confection
+#   def baking
+#     "Baking at 350 degrees for 25 minutes."
+#   end
+# end
+
+# class EggPie < Confection;end
+
+# class Cupcake <  Confection
+#   def frosting
+#     "Applying frosting"
+#   end
+
+# end
+
+# class BananaCake < Confection;end
+
+# strawberry = Cupcake.new
+
+# puts strawberry.baking
+# puts strawberry.frosting
+
+
+# Pt 2
+# module AdminPermisson
+#   def edit_users_profile
+#     puts "Admin updated all users profile"
+#   end
+# end
+
+# module BuyerPermission
+#   def buy
+#     puts "Buyer has bought an item"
+#   end
+
+# end
+
+# class User
+#   attr_accessor :username, :password
+
+#   def initialize(username, password, ip_address)
+#     @username = username
+#     @password = password
+#     @ip_address = ip_address
+#   end
+
+#   def change_password(new_password)
+#     @password = new_password
+#   end
+
+#   protected
+#   def login
+#     puts "User logged in. IP address: #{@ip_address}"
+#   end
+# end
+
+# class Admin < User
+# include AdminPermisson
+
+# def admin_login
+#   login
+# end
+# end
+
+
+# class Buyer < User
+# include BuyerPermission
+
+# def buyer_login
+#   login
+# end
+# end
+
+# ## execute
+
+# my_admin = Admin.new('avionuser', 'password', '127.0.0.1')
+# my_admin.admin_login
+# my_admin.edit_users_profile
+
+# my_admin.change_password('new_password')
+
+# buyer = Buyer.new('juan', 'password', '127.0.0.1')
+# buyer.buyer_login
+# buyer.buy
+
+# buyer.change_password('new_password')
+
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------#
+
+# 4. Create an object that implements encapsulation.
+
+class Children
+  def initialize(eldest_age, youngest_age)
+    @eldest_age = eldest_age
+    @youngest_age = youngest_age
+  end
+
+  def age_gap
+    @eldest_age - @youngest_age
   end
 end
 
-class EggPie < Confection;end
+smith_siblings = Children.new(25, 17)
+puts smith_siblings.age_gap
 
-class Cupcake <  Confection
-  def frosting
-    "Applying frosting"
-  end
 
-end
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------#
 
-class BananaCake < Confection;end
 
-strawberry = Cupcake.new
-
-puts strawberry.baking
-puts strawberry.frosting
