@@ -1,3 +1,4 @@
+[![](https://visitcount.itsvg.in/api?id=p3rc1us&icon=3&color=3)](https://visitcount.itsvg.in)
 # 💫 About Me:
 🔭 I’m currently practicing on Ruby<br>🌱 and everyday I’m trying to learn it,<br>⚡ because as they say, Consistency beats Intelligence.
 
@@ -25,6 +26,6 @@
 <img src='https://randommeme-five.vercel.app/' style="height: 400px;"/>
 
 ---
-[![](https://visitcount.itsvg.in/api?id=p3rc1us&icon=3&color=3)](https://visitcount.itsvg.in)
+
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
