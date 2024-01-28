@@ -527,17 +527,19 @@
 
 
 
-class Profile
-  attr_accessor :full_name, :age, :address, :work
+# class Profile
+#   attr_accessor :full_name, :age, :address, :work
 
-  def initialize(full_name, age, address, work)
-    @full_name = full_name
-    @age = age
-    @address =  address
-    @work = work
-  end
-end
+#   def initialize(full_name, age, address, work)
+#     @full_name = full_name
+#     @age = age
+#     @address =  address
+#     @work = work
+#   end
+# end
 
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------#
+# Getter Setter Activity
 
 # describe 'Profile' do
 #   it 'has getters and setters' do
@@ -557,7 +559,9 @@ end
 #   end
 # end
 
-#---- Activity
+
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------#
+#Create your own object with attributes and methods.
 
 # class Pet
 #   attr_reader :name, :breed, :size
@@ -982,13 +986,15 @@ end
 # 4. Create an object that implements encapsulation.
 
 # class Children
+#   attr_reader :eldest_age, :youngest_age
+  
 #   def initialize(eldest_age, youngest_age)
 #     @eldest_age = eldest_age
 #     @youngest_age = youngest_age
 #   end
 
 #   def age_gap
-#     @eldest_age - @youngest_age
+#     eldest_age - youngest_age
 #   end
 # end
 
@@ -1032,36 +1038,35 @@ end
 
 #  6. Create Objects that implements Polymorphism and Duck-typing
 
-class Orchestra
-  def initialize(instrument_name, sound)
-    @instrument = instrument_name
-    @sound = sound
-  end
+# class Orchestra
+#   def initialize(instrument_name, sound)
+#     @instrument = instrument_name
+#     @sound = sound
+#   end
 
-  def play
-    "That #{@sound} sound is like a #{@instrument}..."
-  end
-end
+#   def play
+#     "That #{@sound} sound is like a #{@instrument}..."
+#   end
+# end
 
-  class Violin < Orchestra
-    def initialize(instrument_name)
-    super(instrument_name, "OoO EeE OoO")
-    end
-  end
+#   class Violin < Orchestra
+#     def initialize(instrument_name)
+#     super(instrument_name, "OoO EeE OoO")
+#     end
+#   end
 
-  class Piano < Orchestra
-    def initialize(instrument_name)
-    super(instrument_name, "DUN DUN DUN")
-    end
-  end
+#   class Piano < Orchestra
+#     def initialize(instrument_name)
+#     super(instrument_name, "DUN DUN DUN")
+#     end
+#   end
 
 
-steinway = Piano.new("Steinway & Sons")
-stradivarius = Violin.new("Stradivarius")
+# steinway = Piano.new("Steinway & Sons")
+# stradivarius = Violin.new("Stradivarius")
 
-puts steinway.play
-puts stradivarius.play
+# puts steinway.play
+# puts stradivarius.play
 
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------#
-
