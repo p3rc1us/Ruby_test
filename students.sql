@@ -20,3 +20,16 @@
 -- (5, 'Zack', 'Blank', 'Matthews', 22, 'Marikina'),
 -- (6, 'Finn', 'Blank', 'Lam', 25, 'Manila');
 
+-- UPDATE students
+-- SET first_name = 'Ivan', middle_name = 'Ingram', last_name = 'Howard', age = 25, location  = 'Bulacan'
+-- where id = 1;
+
+-- DELETE FROM students
+-- where id = (
+-- SELECT id 
+-- FROM students 
+-- ORDER BY id DESC 
+-- Limit 1
+-- );
+
+-- SELECT * FROM students
