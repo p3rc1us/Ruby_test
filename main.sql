@@ -32,4 +32,15 @@
 -- Limit 1
 -- );
 
+-- SELECT  COUNT(id) FROM students;
+
+-- SELECT COUNT(first_name), location
+-- FROM students
+-- WHERE location = 'Manila'
+-- GROUP BY location;
+
+-- SELECT AVG(age)
+-- from students
+
 -- SELECT * FROM students
+-- ORDER BY age DESC;
