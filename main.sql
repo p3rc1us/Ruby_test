@@ -67,3 +67,9 @@ VALUES
 (8, 8, 'B'),
 (9, 9, 'B'),
 (10, 10, 'C');
+
+--INNER JOIN
+SELECT c.id, c.section, s.first_name, s.middle_name, s.last_name, s.age, s.location FROM students s INNER JOIN classrooms c ON s.id = c.student_id;
+
+--LEFT JOIN --I prioritize classrooms than students
+SELECT c.id, c.section, s.first_name, s.middle_name, s.last_name, s.age, s.location FROM classrooms c LEFT JOIN students s ON s.id = c.student_id;
