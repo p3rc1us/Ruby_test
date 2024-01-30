@@ -1,12 +1,13 @@
 CREATE TABLE students(
-id integer,
-first_name text,
-middle_name text,
-last_name text,
-age integer,
-location text);
+id integer PRIMARY KEY, --PRIMARY KEY
+first_name VARCHAR(100) NOT NULL, --VARCHAR
+middle_name VARCHAR(100) NOT NULL,
+last_name VARCHAR(100) NOT NULL,
+age integer NOT NULL, 
+location VARCHAR(100)) NOT NULL; --VARCHAR
 
-INSERT INTO students (id,
+INSERT INTO students (
+id,
 first_name,
 middle_name,
 last_name,

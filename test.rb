@@ -1071,29 +1071,43 @@
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------#
 
+# SOLID ACTIVITY
 
-def positive_negative(arr)
+# def positive_negative(arr)
 
-  return arr if arr.empty? || arr.nil?
+#   return arr if arr.empty? || arr.nil?
 
-  positives = []
-  negatives = []
-  final = []
+#   positives = []
+#   negatives = []
+#   final = []
 
-  arr.each do |x|
-    if x > 0
-      positives.push(x) 
-    else x < 0
-      negatives.push(x)
-    end
-  end
+#   arr.each do |x|
+#     if x > 0
+#       positives.push(x) 
+#     else x < 0
+#       negatives.push(x)
+#     end
+#   end
 
-  y = positives.size
-  final.push(y)
-  z = negatives.sum
-  final.push(z)
+#   y = positives.size
+#   final.push(y)
+#   z = negatives.sum
+#   final.push(z)
 
-  puts final
+#   puts final
+# end
+
+# positive_negative([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15])
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------#
+
+
+# Coding Excercise: Keep Hydrated!
+
+def to_liters(x)
+  y = x * 0.5
+  puts y.floor
 end
 
-positive_negative([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15])
+to_liters(2)
