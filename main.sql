@@ -73,3 +73,9 @@ SELECT c.id, c.section, s.first_name, s.middle_name, s.last_name, s.age, s.locat
 
 --LEFT JOIN --I prioritize classrooms than students
 SELECT c.id, c.section, s.first_name, s.middle_name, s.last_name, s.age, s.location FROM classrooms c LEFT JOIN students s ON s.id = c.student_id;
+
+--RIGHT JOIN --Now I will prioritize students than classrooms
+SELECT c.id, c.section, s.first_name, s.middle_name, s.last_name, s.age, s.location FROM classrooms c RIGHT JOIN students s ON s.id = c.student_id;
+
+--FULL JOIN
+SELECT c.id, c.section, s.first_name, s.middle_name, s.last_name, s.age, s.location FROM classrooms c FULL JOIN students s ON s.id = c.student_id;
