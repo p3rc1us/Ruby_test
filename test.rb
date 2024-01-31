@@ -1120,23 +1120,22 @@
 #---my first attempt---#
 # what's wrong with this is that i'm  only comparing [0] to [1..-1]. I need to increment [0] also that that every element will be compared to each other.
 
-def is_isogram(x)
-  y = x.split("")
-  letter = y[0]
+# def is_isogram(x)
+#   y = x.split("")
+#   letter = y[0]
 
-  y[1..-1].each do |z|
-    if letter == z 
-      return false
-    end
-  end
-  true
-end
+#   y[1..-1].each do |z|
+#     if letter == z 
+#       return false
+#     end
+#   end
+#   true
+# end
 
-puts is_isogram("kerk")
+# puts is_isogram("kerk")
 
 
 #-----incremented letter----#
-
 
 def is_isogram(x)
   y = x.split("")
@@ -1151,7 +1150,6 @@ def is_isogram(x)
 
     i += 1
   end
-
   true
 end
 
