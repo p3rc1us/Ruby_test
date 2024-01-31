@@ -1105,9 +1105,29 @@
 
 # Coding Excercise: Keep Hydrated!
 
-def to_liters(x)
-  y = x * 0.5
-  puts y.floor
+# def to_liters(x)
+#   y = x * 0.5
+#   puts y.floor
+# end
+
+# to_liters(2)
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------#
+
+# Isograms
+
+
+def is_isogram(x)
+  y = x.split("")
+  letter = y[0]
+
+  y[1..-1].each do |z|
+    if letter == z 
+      return false
+    end
+  end
+  true
 end
 
-to_liters(2)
+puts is_isogram("kerk")
