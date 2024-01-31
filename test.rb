@@ -1117,7 +1117,7 @@
 
 # Isograms
 
-#---my first attempt---#
+# ---my first attempt---#
 # what's wrong with this is that i'm  only comparing [0] to [1..-1]. I need to increment [0] also that that every element will be compared to each other.
 
 # def is_isogram(x)

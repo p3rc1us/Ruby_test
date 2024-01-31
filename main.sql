@@ -1,12 +1,12 @@
 CREATE TABLE students(
-id integer PRIMARY KEY, --PRIMARY KEY
-first_name VARCHAR(100) NOT NULL, --VARCHAR
+id integer PRIMARY KEY,
+first_name VARCHAR(100) NOT NULL,
 middle_name VARCHAR(100) NOT NULL,
 last_name VARCHAR(100) NOT NULL,
 age integer NOT NULL, 
-location VARCHAR(100)) NOT NULL; --VARCHAR
+location VARCHAR(100)NOT NULL); 
 
-INSERT INTO students (
+INSERT INTO students(
 id,
 first_name,
 middle_name,
@@ -46,37 +46,38 @@ from students
 SELECT * FROM students
 ORDER BY age DESC;
 
--------------------------------------------------Advanced Excercise--------------------------------------------------------------
 
-CREATE TABLE classrooms (
-id INTEGER not null,
-student_id integer not null,
-section text not null)
+-------------------------------------------------Sir Abdul Excercise--------------------------------------------------------------
 
-INSERT INTO classrooms (
+
+CREATE TABLE research_papers(
+    id INTEGER NOT NULL,
+    student_id INTEGER NOT NULL,
+    grade Varchar(1),
+    PRIMARY KEY (id),
+    FOREIGN KEY (student_id) REFERENCES students(id)
+);
+
+INSERT INTO research_papers (
 id,
 student_id,
-section)
+grade)
 VALUES 
 (1, 1, 'A'),
-(2, 2, 'A'),
-(3, 3, 'B'),
-(4, 4, 'C'),
-(5, 5, 'B'),
-(6, 6, 'A'),
-(7, 7, 'C'),
-(8, 8, 'B'),
-(9, 9, 'B'),
-(10, 10, 'C');
+(2, 1, 'B'),
+(3, 2, 'B'),
+(4, 2, 'B'), --2  students have 2 research papers or more
+(5, 3, NULL),
+(6, 4, NULL), --2 students have NULL research papers
+(7, 5, 'C'),
+(8, 1, 'B'),
+(9, 1, 'B'),
+(10, 1, 'C');
 
---INNER JOIN
-SELECT c.id, c.section, s.first_name, s.middle_name, s.last_name, s.age, s.location FROM students s INNER JOIN classrooms c ON s.id = c.student_id;
+--Query all students with multiple research papers (select first_name, last_name, and number_of_research_papers only)
 
---LEFT JOIN --I prioritize classrooms than students
-SELECT c.id, c.section, s.first_name, s.middle_name, s.last_name, s.age, s.location FROM classrooms c LEFT JOIN students s ON s.id = c.student_id;
+SELECT s.first_name, s.last_name, COUNT(r.student_id > 1) AS number_of_research_papers FROM students s INNER JOIN research_papers r ON s.id = r.student_id GROUP BY s.id HAVING COUNT(r.student_id) > 1;
 
---RIGHT JOIN --Now I will prioritize students than classrooms
-SELECT c.id, c.section, s.first_name, s.middle_name, s.last_name, s.age, s.location FROM classrooms c RIGHT JOIN students s ON s.id = c.student_id;
+--Query all students with ungraded research papers (select first_name, last_name, research_paper_id, and grade only)
 
---FULL JOIN
-SELECT c.id, c.section, s.first_name, s.middle_name, s.last_name, s.age, s.location FROM classrooms c FULL JOIN students s ON s.id = c.student_id;
+SELECT s.first_name, s.last_name, COUNT(r.id) AS research_paper_id, r.grade  FROM students s INNER JOIN research_papers r ON s.id = r.student_id GROUP BY s.first_name, s.last_name, r.grade HAVING r.grade is null;
