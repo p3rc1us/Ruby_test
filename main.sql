@@ -50,6 +50,8 @@ ORDER BY age DESC;
 -------------------------------------------------Sir Abdul Excercise--------------------------------------------------------------
 
 
+CREATE TYPE grades AS ENUM ('A', 'B', 'C', 'D', 'E', 'F');
+
 CREATE TABLE research_papers(
     id INTEGER NOT NULL,
     student_id INTEGER NOT NULL,
@@ -76,7 +78,7 @@ VALUES
 
 --Query all students with multiple research papers (select first_name, last_name, and number_of_research_papers only)
 
-SELECT s.first_name, s.last_name, COUNT(r.student_id > 1) AS number_of_research_papers FROM students s INNER JOIN research_papers r ON s.id = r.student_id GROUP BY s.id HAVING COUNT(r.student_id) > 1;
+SELECT s.first_name, s.last_name, COUNT(r.student_id) AS number_of_research_papers FROM students s INNER JOIN research_papers r ON s.id = r.student_id GROUP BY s.id HAVING COUNT(r.student_id) > 1;
 
 --Query all students with ungraded research papers (select first_name, last_name, research_paper_id, and grade only)
 
