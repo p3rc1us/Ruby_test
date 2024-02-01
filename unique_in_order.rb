@@ -1,26 +1,16 @@
-# def unique_in_order(arr)
-#     if arr.is_a? String
-#         y = arr.split('')
-#         x = y.each_with_object([]) { |element, result| result << element unless result.last == element }
-#         puts x.inspect
-#     elsif arr.is_a? Array
-#         z = arr.uniq
-#         puts z.inspect
-#     end
-# end
-
 def unique_in_order(arr)
-    result = arr.is_a?(String) ? arr.split('').chunk(&:itself).map(&:first) : arr.uniq
-    puts result.inspect
+    if arr.is_a? String
+        y = arr.split('')
+        x = y.each_with_object([]) { |element, result| result << element unless result.last == element }
+        puts x.inspect
+    elsif arr.is_a? Array
+        z = arr.uniq
+        puts z.inspect
+    end
 end
-  
 
-unique_in_order('AABBCc12DDAAABBEE')
+unique_in_order('AABBCcDDAAABBEE')
 unique_in_order([1,2,2,3,3])
-
-
-
-
 
 
 #attempt 
@@ -33,4 +23,4 @@ unique_in_order([1,2,2,3,3])
 
 # arr_object([14,13,52,58,60,45,99,90])
 
-# puts "Big Wins: << = append, each_with_object = each_to_an_object"
+puts "Big Wins: << = append, each_with_object = each_to_an_object"
