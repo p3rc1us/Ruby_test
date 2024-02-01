@@ -49,17 +49,40 @@ ORDER BY age DESC;
 
 -------------------------------------------------Sir Abdul Excercise--------------------------------------------------------------
 
-
+---Bonus Points---
 CREATE TYPE grades AS ENUM ('A', 'B', 'C', 'D', 'E', 'F');
 
 CREATE TABLE research_papers(
     id INTEGER NOT NULL,
     student_id INTEGER NOT NULL,
-    grade Varchar(1),
+    grade grades,
     PRIMARY KEY (id),
     FOREIGN KEY (student_id) REFERENCES students(id)
 );
 
+-- To Error (check for custom data type) --
+
+INSERT INTO research_papers (
+id,
+student_id,
+grade)
+VALUES 
+(1, 1, 'A'),
+(2, 1, 'B'),
+(3, 2, 'B'),
+(4, 2, 'B'), --2 students have 2 research papers or more
+(5, 3, NULL),
+(6, 4, NULL), --2 students have NULL research papers
+(7, 5, 'C'),
+(8, 1, 'B'),
+(9, 1, 'B'),
+(10, 1, 'G'); --Error here
+
+---Expected Error--- 
+-- Query 1: ERROR:  invalid input value for enum grades: "G"
+-- LINE 15: (10, 1, 'G');
+
+---To fix---
 INSERT INTO research_papers (
 id,
 student_id,
@@ -74,7 +97,8 @@ VALUES
 (7, 5, 'C'),
 (8, 1, 'B'),
 (9, 1, 'B'),
-(10, 1, 'C');
+(10, 1, 'C'); --Fixed 'G' to 'C'
+
 
 --Query all students with multiple research papers (select first_name, last_name, and number_of_research_papers only)
 
