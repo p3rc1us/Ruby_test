@@ -1137,20 +1137,34 @@
 
 #-----incremented letter----#
 
-def is_isogram(x)
-  y = x.split("")
-  i = 0
+# def is_isogram(x)
+#   y = x.split("")
+#   i = 0
   
-  while i < y.length - 1
-    letter = y[i]
+#   while i < y.length - 1
+#     letter = y[i]
 
-    y[i + 1..-1].each do |z|                                    # explanation [a, b, a, d, e]
-      return false if letter == z
-    end
+#     y[i + 1..-1].each do |z|                                    # explanation [a, b, a, d, e]
+#       return false if letter == z
+#     end
 
-    i += 1
-  end
-  true
+#     i += 1
+#   end
+#   true
+# end
+
+# puts is_isogram("kerk")
+
+# excercise sunday
+
+def scrabble(word)
+  scores = {
+  'a' => 1, 'e' => 1, 'i' => 1, 'l' => 1, 'n' => 1, 'o' => 1, 'r' => 1, 's' => 1, 't' => 1, 'u' => 1,
+  'd' => 2, 'g' => 2, 'b' => 3, 'c' => 3, 'm' => 3, 'p' => 3,'f' => 4, 'h' => 4, 'v' => 4, 'w' => 4, 
+  'y' => 4, 'k' => 5, 'j' => 8, 'x' => 8, 'q' => 10, 'z' => 10}
+
+  word = word.downcase.split('') if word.instance_of? String
+  word.sum { |letter| scores[letter]}
 end
 
-puts is_isogram("kerk")
+puts scrabble("hooray")
