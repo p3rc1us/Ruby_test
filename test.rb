@@ -1157,14 +1157,29 @@
 
 # excercise sunday
 
-def scrabble(word)
-  scores = {
-  'a' => 1, 'e' => 1, 'i' => 1, 'l' => 1, 'n' => 1, 'o' => 1, 'r' => 1, 's' => 1, 't' => 1, 'u' => 1,
-  'd' => 2, 'g' => 2, 'b' => 3, 'c' => 3, 'm' => 3, 'p' => 3,'f' => 4, 'h' => 4, 'v' => 4, 'w' => 4, 
-  'y' => 4, 'k' => 5, 'j' => 8, 'x' => 8, 'q' => 10, 'z' => 10}
+# def scrabble(word)
+#   scores = {
+#   'a' => 1, 'e' => 1, 'i' => 1, 'l' => 1, 'n' => 1, 'o' => 1, 'r' => 1, 's' => 1, 't' => 1, 'u' => 1,
+#   'd' => 2, 'g' => 2, 'b' => 3, 'c' => 3, 'm' => 3, 'p' => 3,'f' => 4, 'h' => 4, 'v' => 4, 'w' => 4, 
+#   'y' => 4, 'k' => 5, 'j' => 8, 'x' => 8, 'q' => 10, 'z' => 10}
 
-  word = word.downcase.split('') if word.instance_of? String
-  word.sum { |letter| scores[letter]}
+#   word = word.downcase.split('') if word.instance_of? String
+#   word.sum { |letter| scores[letter]}
+# end
+
+# puts scrabble("hooray")
+
+# two sums
+
+def two_sum(nums, target)
+  num_hash = {}
+  nums.each_with_index do |num, index|
+  sum = target - num
+  return [num_hash[sum], index].inspect if num_hash.key?(sum)
+  num_hash[num] = index
+  end
+
+  return []
 end
 
-puts scrabble("hooray")
+puts two_sum([1,2,3,4,5,6,7], 8)
