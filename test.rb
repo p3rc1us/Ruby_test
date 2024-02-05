@@ -1171,15 +1171,57 @@
 
 # two sums
 
-def two_sum(nums, target)
-  num_hash = {}
-  nums.each_with_index do |num, index|
-  sum = target - num
-  return [num_hash[sum], index].inspect if num_hash.key?(sum)
-  num_hash[num] = index
-  end
+# def two_sum(nums, target)
+#   num_hash = {}
+#   nums.each_with_index do |num, index|
+#   sum = target - num
+#   if num_hash.key?(sum)
+#     puts [num_hash[sum], index].inspect
+#   end
+#   num_hash[num] = index
+#   end
 
-  return []
+#   return []
+# end
+
+# two_sum([1,2,3,4,5,6,7], 8)
+
+
+
+
+
+
+def look(x,y)
+  hash = { 'red' => 4}
+  puts "value: #{       hash[x]           } key: #{         hash.key(hash[x])           }"
 end
 
-puts two_sum([1,2,3,4,5,6,7], 8)
+look('red', 4)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
