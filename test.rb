@@ -1194,6 +1194,7 @@
 def look(x,y)
   hash = { 'red' => 4}
   puts "value: #{       hash[x]           } key: #{         hash.key(hash[x])           }"
+  puts "key: #{      hash.key(y)        } value: #{     hash[hash.key(y)]               }"
 end
 
 look('red', 4)
