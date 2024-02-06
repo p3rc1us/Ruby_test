@@ -1200,29 +1200,15 @@ end
 look('red', 4)
 
 
+# def two_sum(nums, target)
+#   final = {}
 
+#   nums.each_with_index do |element, index| 
+#   missing = target - element
+#   if final.key?(missing)
+#     puts [final[missing], index]
+#   end
+#   end
+# end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# two_sum([1,2,3], 4)
