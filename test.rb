@@ -1187,12 +1187,8 @@
 # two_sum([1,2,3,4,5,6,7], 8)
 
 
-
-
-
-
 def look(x,y)
-  hash = { 'red' => 4}
+  hash = { x => y}
   puts "value: #{       hash[x]           } key: #{         hash.key(hash[x])           }"
   puts "key: #{      hash.key(y)        } value: #{     hash[hash.key(y)]               }"
 end
@@ -1206,9 +1202,26 @@ look('red', 4)
 #   nums.each_with_index do |element, index| 
 #   missing = target - element
 #   if final.key?(missing)
-#     puts [final[missing], index]
+#     return [final[missing], index]
 #   end
+  
 #   end
 # end
 
-# two_sum([1,2,3], 4)
+# two_sum([2,7,10,12], 9)
+
+def format_string(x)
+  
+  x = x.map { |hash| hash[:name] }
+
+  return x if x.count == 0 || x.count >= 4;
+
+  if 
+    puts "#{x[0]}, #{x[1]} & #{x[2]}"
+  elsif x.count == 2
+    puts "#{x[0]} & #{x[1]}"
+  else
+    puts "#{x[0]}"
+  end
+  
+end
