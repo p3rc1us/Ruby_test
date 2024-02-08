@@ -1225,3 +1225,8 @@ def format_string(x)
   end
   
 end
+
+format_string([ {name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'} ])
+format_string([ {name: 'Bart'}, {name: 'Lisa'}])
+format_string([ {name: 'Bart'}])
+format_string([ {name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'}, {name: 'Richy'} ])
