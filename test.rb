@@ -1210,23 +1210,35 @@ look('red', 4)
 
 # two_sum([2,7,10,12], 9)
 
+#----------------------------------------------------------------------------------------------------------------------------------#
+
+
+# def format_string(x)
+  
+#   x = x.map { |hash| hash[:name] }
+
+#   return x if x.count == 0 || x.count >= 4;
+
+#   if 
+#     puts "#{x[0]}, #{x[1]} & #{x[2]}"
+#   elsif x.count == 2
+#     puts "#{x[0]} & #{x[1]}"
+#   else
+#     puts "#{x[0]}"
+#   end
+# end
+
+# format_string([ {name: 'Bart'}])
+# format_string([ {name: 'Bart'}, {name: 'Lisa'}])
+# format_string([ {name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'}])
+# format_string([ {name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'}, {name: 'Richy'} ])
+
+#refactored
+
 def format_string(x)
-  
   x = x.map { |hash| hash[:name] }
-
-  return x if x.count == 0 || x.count >= 4;
-
-  if 
-    puts "#{x[0]}, #{x[1]} & #{x[2]}"
-  elsif x.count == 2
-    puts "#{x[0]} & #{x[1]}"
-  else
-    puts "#{x[0]}"
-  end
-  
+	return x if x.count == 0
+	puts "#{x[0...-1].join(', ')} & #{x[-1]}"
 end
 
-format_string([ {name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'} ])
-format_string([ {name: 'Bart'}, {name: 'Lisa'}])
-format_string([ {name: 'Bart'}])
-format_string([ {name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'}, {name: 'Richy'} ])
+format_string([ {name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'}, {name: 'Richy'}  ])
