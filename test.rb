@@ -1214,25 +1214,25 @@
 #----------------------------------------------------------------------------------------------------------------------------------#
 
 
-def format_string(x)
+# def format_string(x)
   
-  x = x.map { |hash| hash[:name] }
+#   x = x.map { |hash| hash[:name] }
 
-  return x if x.count == 0;
+#   return x if x.count == 0;
 
-  if x.count > 2
-    puts "#{x[0...-1].join(', ')} & #{x[-1]}"
-  elsif x.count == 2
-    puts "#{x[0]} & #{x[1]}"
-  else
-    puts "#{x[0]}"
-  end
-end
+#   if x.count > 2
+#     puts "#{x[0...-1].join(', ')} & #{x[-1]}"
+#   elsif x.count == 2
+#     puts "#{x[0]} & #{x[1]}"
+#   else
+#     puts "#{x[0]}"
+#   end
+# end
 
-format_string([ {name: 'Bart'}])
-format_string([ {name: 'Bart'}, {name: 'Lisa'}])
-format_string([ {name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'}])
-format_string([{name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'}, {name: 'Richy'}])
+# format_string([ {name: 'Bart'}])
+# format_string([ {name: 'Bart'}, {name: 'Lisa'}])
+# format_string([ {name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'}])
+# format_string([{name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'}, {name: 'Richy'}])
 
 #refactored
 
@@ -1247,9 +1247,28 @@ format_string([{name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'}, {name: 'Richy'}
 
 #----------------------------------------------------------------------------------------------------------------------------------#
 
+# attempt 1
 
-def including(x)
-  puts x = x[1..-1].include?(x[0]) ? true : false
+# def including(x)
+  # puts x = x[1..-1].include?(x[0]) ? x[0] : false
+
+#   if x[3..-1].include?(x[0])
+#     puts x[0]
+#   elsif x[1..-1].include?(x[0])
+#     puts x[0]
+#   else puts x[1]
+#   end
+# end
+
+# including([1, 1, 1, 2, 1, 1])
+
+attempt in using ewo
+
+def unique_number(x)
+  y = x.each_with_object([]) { |element, container| container << element if !container.include?(element) }
+  puts y.inspect
 end
 
-including([1, 2, 1, 1])
+unique_number([1, 2, 1, 1])
+
+
