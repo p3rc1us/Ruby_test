@@ -1262,13 +1262,38 @@
 
 # including([1, 1, 1, 2, 1, 1])
 
-attempt in using ewo
+# attempt in using ewo
 
-def unique_number(x)
-  y = x.each_with_object([]) { |element, container| container << element if !container.include?(element) }
-  puts y.inspect
+# def unique_number(x)
+#   y = x.each_with_object([]) { |element, container| container << element if !container.include?(element) }
+#   puts y.inspect
+# end
+
+# unique_number([1, 2, 1, 1])
+
+
+
+#final attempt
+
+# def with_index(x)
+
+#   x[1..-1].each_with_index do |element, index|
+#     if element != x[0]
+#       puts element
+#     end
+#   end
+# end
+
+def impostor(x)
+
+  x[1..-1].each do |element|
+    if element !=x[0]
+      puts element
+    end
+  end
 end
 
-unique_number([1, 2, 1, 1])
 
+impostor([1, 1, 1, 2, 1, 1])
+impostor([0, 0, 0.55, 0, 0])
 
