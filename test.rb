@@ -1243,3 +1243,13 @@ format_string([{name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'}, {name: 'Richy'}
 # end
 
 # format_string([ {name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'}, {name: 'Richy'}  ])
+
+
+#----------------------------------------------------------------------------------------------------------------------------------#
+
+
+def including(x)
+  puts x = x[1..-1].include?(x[0]) ? true : false
+end
+
+including([1, 2, 1, 1])
