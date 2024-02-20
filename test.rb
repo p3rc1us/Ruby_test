@@ -16,7 +16,7 @@
 #    "goofy"
 #     ]
 #     if phrase.include?(element)
-        # puts "yes nandito si #{element}, nasa pang #{phrase.index(element)} sya" 
+        # puts "yes nandito si #{element}, nasa pang #{phrase.index(element)} sya"
 #     else puts "wala siya dito"
 #     end
 # end
@@ -37,7 +37,7 @@
 # def lego
 # g=0
 
-# while g < 12 do 
+# while g < 12 do
 #     g += 1
 #     if g % 2 == 0
 #         puts "im an even number, because im #{g}"
@@ -54,7 +54,7 @@
 
 #     while x < 20 do
 #         x += 1
-#         if (x % 3 == 0 and x % 5 == 0) 
+#         if (x % 3 == 0 and x % 5 == 0)
 #             puts "FizzBuzz"
 #         elsif (x % 5 == 0)
 #             puts "Buzz"
@@ -86,9 +86,9 @@
 #         else
 #             puts "#{y} is an odd number"
 #         end
-        
+
 #     end
-# end        
+# end
 
 # buzzBuzz
 
@@ -123,7 +123,7 @@
 #             puts x
 #         break
 #     end
-    
+
 # end
 
 # maxNumber(12,44,32)
@@ -234,9 +234,9 @@
 #---5. Write a Ruby program to compute the sum of elements in a given array.
 
 # def sum
-    
+
 #     array = [1, 2, 3, 4, 5]
-    
+
 #      puts array.sum
 
 #     x = 0
@@ -247,7 +247,7 @@
 #         x += 1
 #     end
 #     puts result
-    
+
 # end
 
 # sum
@@ -255,7 +255,7 @@
 # def sum2
 
 #     array = [1, 2, 3, 4, 5]
-    
+
 #     result = 0
 
 #     array.each do |x|
@@ -286,10 +286,10 @@
 # def theSame(array)
 #     puts array.uniq
 #   end
-  
+
 #   theSame([1, 2, 3, 4, 1, 2, 2, 3, 5, 6])
 
-#---7. Write a Ruby program to check two given arrays of integers and test 
+#---7. Write a Ruby program to check two given arrays of integers and test
 # whether they have the same first element or they have the same last element. Both arrays length must be 1 or more.
 
 # def sameArray(arrayA, arrayB)
@@ -341,16 +341,16 @@
 # def modify_to_integer(array)
 
 #     puts "im using map bang"
-#     puts array.split(", ").map! { |y| y.to_i} 
-    
+#     puts array.split(", ").map! { |y| y.to_i}
+
 #     puts "im using for each"
-#     array.split(", ").each do |x| 
+#     array.split(", ").each do |x|
 #       x.to_i
-      
+
 #       puts x
-      
+
 #     end
-    
+
 # end
 
 # modify("Red, Green, Blue, White")
@@ -360,7 +360,7 @@
 #---11. Write a Ruby program to create an array with the elements "rotated left" of a given array of ints length 3.
 
 # def rotate(arr)
-    
+
 #     arr.rotate!
 
 #     puts arr
@@ -400,19 +400,19 @@
 # def check
 #   arr = [1, 3, 5, 7, 9, 11]
 #   number = 3
-  
+
 #   arr.include?(number)
 #   puts "yes #{number} is here!"
-    
+
 # end
 
 # check
 
-#---Sir Abdul excercise 6. Write a program that takes a number from the user between 0 and 100 
+#---Sir Abdul excercise 6. Write a program that takes a number from the user between 0 and 100
 # and reports back whether the number is between 0 and 50, 51 and 100, or above 100
 
 # def check_num(x)
-  
+
 #   if (x > 0 && x < 100)
 
 #     if (x < 50)
@@ -420,7 +420,7 @@
 #     elsif (x > 51)
 #       puts "between 51-100"
 #     else puts "input between 0-50 and 51-100 only"
-      
+
 #     end
 
 #   elsif (x == 0 || x == 100)
@@ -454,7 +454,7 @@
 
 # END WHILE means “keep performing this action as long as a certain condition is met”.-----
 
-#--- 4. 
+#--- 4.
 
 # def divisible
 #   arr = [6, 3, 1, 8, 4, 2, 10, 65, 102]
@@ -470,7 +470,7 @@
 # divisible
 
 # def square(num)
-  
+
 #   x = 1
 
 #   while x <= num
@@ -480,7 +480,7 @@
 #     x += 1
 #   end
 #   puts "false hindi yan kwan, perfect square"
-  
+
 # end
 
 # square(678)
@@ -550,7 +550,7 @@
 #     my_profile.full_name = 'Juan Cruz'
 
 #     expect(my_profile.full_name).to eq('Juan Cruz')
-    
+
 #     my_profile.age = 25
 #     my_profile.work = 'Software Engineer'
 
@@ -588,12 +588,12 @@
 
 #       puts "Please type your name as the new owner of #{name}, the #{size} #{breed}."
 #       @owner = gets.chomp
-      
+
 #         begin
 #             puts "Please type an appropriate name."
 #             @owner = gets.chomp
 #         end while @owner == ""
-      
+
 #       puts @owner + " has adopted #{name}!"
 
 #     else puts "Sorry, #{name} is not available for adoption."
@@ -737,7 +737,7 @@
 # puts Animal.ancestors
 
 # ------------------------------------------ Exercise  -------------------------------------------------- #
-# 1. Create a superclass called Vehicle for your MyCar class to inherit from and move the behavior that isn't specific to the MyCar class to the superclass. 
+# 1. Create a superclass called Vehicle for your MyCar class to inherit from and move the behavior that isn't specific to the MyCar class to the superclass.
 # Create a constant in your MyCar class that stores information about the vehicle that makes it different from other types of Vehicles.
 # Then create a new class called MyTruck that inherits from your superclass that also has a constant defined that separates it from the MyCar class in some way.
 
@@ -755,7 +755,7 @@
 
 # class MyCar < Vehicle
 #   wheels = 4
-  
+
 # end
 
 # class MyTruck < Vehicle
@@ -765,7 +765,7 @@
 # my_car = MyCar.new("rory")
 # puts my_car.rev("rory")
 
-# 2. Add a class variable to your superclass that can keep track of the number of objects created that inherit from the superclass. 
+# 2. Add a class variable to your superclass that can keep track of the number of objects created that inherit from the superclass.
 # Create a method to print out the value of this class variable as well.
 
 
@@ -787,16 +787,16 @@
 #   puts "vroom! vroom!"
 # end
 # end
-  
+
 # class MyCar < Vehicle
 #   wheels = 4
-    
+
 # end
-  
+
 # class MyTruck < Vehicle
 #   wheels = 18
 # end
-  
+
 # rory = MyCar.new("Rory")
 # bob = MyTruck.new("Bob")
 
@@ -889,8 +889,8 @@
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------#
 
-# 3. We have a Confection class representing baked desserts. Your job is to create a new subclass of Confection, named Cupcake and Banana Cake. 
-# Cupcakes and Banana Cakes need to be baked just like other confections, but cupcakes also need to be frosted afterward. Write a prepare method 
+# 3. We have a Confection class representing baked desserts. Your job is to create a new subclass of Confection, named Cupcake and Banana Cake.
+# Cupcakes and Banana Cakes need to be baked just like other confections, but cupcakes also need to be frosted afterward. Write a prepare method
 # for your Cupcake and Banana Cake class that prints ‘Baking at 350 degrees for 25 minutes.’, and then prints ‘Applying frosting’ for Cupcake only.
 
 
@@ -987,7 +987,7 @@
 
 # class Children
 #   attr_reader :eldest_age, :youngest_age
-  
+
 #   def initialize(eldest_age, youngest_age)
 #     @eldest_age = eldest_age
 #     @youngest_age = youngest_age
@@ -1083,7 +1083,7 @@
 
 #   arr.each do |x|
 #     if x > 0
-#       positives.push(x) 
+#       positives.push(x)
 #     else x < 0
 #       negatives.push(x)
 #     end
@@ -1125,7 +1125,7 @@
 #   letter = y[0]
 
 #   y[1..-1].each do |z|
-#     if letter == z 
+#     if letter == z
 #       return false
 #     end
 #   end
@@ -1140,7 +1140,7 @@
 # def is_isogram(x)
 #   y = x.split("")
 #   i = 0
-  
+
 #   while i < y.length - 1
 #     letter = y[i]
 
@@ -1160,7 +1160,7 @@
 # def scrabble(word)
 #   scores = {
 #   'a' => 1, 'e' => 1, 'i' => 1, 'l' => 1, 'n' => 1, 'o' => 1, 'r' => 1, 's' => 1, 't' => 1, 'u' => 1,
-#   'd' => 2, 'g' => 2, 'b' => 3, 'c' => 3, 'm' => 3, 'p' => 3,'f' => 4, 'h' => 4, 'v' => 4, 'w' => 4, 
+#   'd' => 2, 'g' => 2, 'b' => 3, 'c' => 3, 'm' => 3, 'p' => 3,'f' => 4, 'h' => 4, 'v' => 4, 'w' => 4,
 #   'y' => 4, 'k' => 5, 'j' => 8, 'x' => 8, 'q' => 10, 'z' => 10}
 
 #   word = word.downcase.split('') if word.instance_of? String
@@ -1199,12 +1199,12 @@
 # def two_sum(nums, target)
 #   final = {}
 
-#   nums.each_with_index do |element, index| 
+#   nums.each_with_index do |element, index|
 #   missing = target - element
 #   if final.key?(missing)
 #     return [final[missing], index]
 #   end
-  
+
 #   end
 # end
 
@@ -1215,7 +1215,7 @@
 
 
 # def format_string(x)
-  
+
 #   x = x.map { |hash| hash[:name] }
 
 #   return x if x.count == 0;
@@ -1286,8 +1286,7 @@
 # attempt in using ewo/ final answer
 
 def impostor(x)
-  y = x.each_with_object([]) { |element, container| container.push(element) if x.count(element) == 1 }
-  puts y
+  puts x = x.each_with_object([]) { |element, container| container.push(element) if x.count(element) == 1 }
 end
 
 impostor([1, 1, 1, 1, 1, 2])
