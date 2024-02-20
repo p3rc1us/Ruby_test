@@ -1,7 +1,7 @@
 #final attempt(managed to make it a oneliner)
 
 def disemvowel(x)
-    (x.split('')).each_with_object([]) { |letter, lagayan| lagayan << letter if !["a", "e", "i", "o", "u"].include?(letter.downcase)} .join 
+    (x.split('')).each_with_object([]) { |letter, lagayan| lagayan << letter if !["a", "e", "i", "o", "u"].include?(letter.downcase)} .join
 end
 
 
@@ -11,6 +11,3 @@ end
 # end                     #letter != ["a", "e", "i", "o", "u"]
 
 p disemvowel("Ooy labas ka na jan!")
-
-
-
