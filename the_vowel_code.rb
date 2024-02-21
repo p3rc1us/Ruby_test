@@ -7,12 +7,12 @@ def encode(str)
     'u' => 5
   }
 
-  y = str.downcase.split('') if str.instance_of? String
-  x = y.map { |letter| if vowel[letter] then vowel[letter] else letter end }
-  puts x.join.inspect
+  str = str.chars.map { |letter| vowel[letter] || letter }
+  str.join
 end
 
-encode("hello")
+puts encode("hello")
+
 
 def decode(jeje)
   numerals = {
@@ -24,8 +24,8 @@ def decode(jeje)
   }
 
   y = jeje.downcase.split('')
-  x = y.map { |number| if numerals[number] then numerals[number] else number end }
-  puts x.join.inspect
+  x = y.map { |number| numerals[number] || number }
+  p x.join
 end
 
 decode("h3 th2r2")
