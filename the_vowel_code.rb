@@ -7,8 +7,7 @@ def encode(str)
     'u' => 5
   }
 
-  str = str.chars.map { |letter| vowel[letter] || letter }
-  str.join
+  str = str.chars.map { |letter| vowel[letter] || letter }.join
 end
 
 puts encode("hello")
@@ -24,8 +23,7 @@ def decode(jeje)
   }
 
   y = jeje.downcase.split('')
-  x = y.map { |number| numerals[number] || number }
-  p x.join
+  x = y.map { |number| numerals[number] || number }.join
 end
 
-decode("h3 th2r2")
+puts decode("h3 th2r2")
