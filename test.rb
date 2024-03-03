@@ -1285,9 +1285,9 @@ puts scrabble("hooray")
 
 # attempt in using ewo/ final answer
 
-# def impostor(x)
-#   puts x = x.each_with_object([]) { |element, container| container.push(element) if x.count(element) == 1 }
-# end
+def impostor(x)
+  puts x = x.each_with_object([]) { |element, container| container.push(element) if x.count(element) == 1 }
+end
 
-# impostor([1, 1, 1, 1, 1, 2])
-# impostor([0, 0, 0.55, 0, 0])
+impostor([1, 1, 1, 1, 1, 2])
+impostor([0, 0, 0.55, 0, 0])
