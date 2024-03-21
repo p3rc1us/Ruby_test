@@ -17,6 +17,20 @@
 
   # end
 
+# def smallest(arr)
+#   x =  arr.length.to_f
+#   y = x/2
+#   z = y.ceil
+
+#   dif = arr.max - arr.min
+#   puts dif
+
+#   arr.each_with_object([]) { |element, container| container << if element}
+
+# end
+
+# smallest([4, 5, 1])
+
 def smallest(arr)
   arr.each_with_index do | e, i |
     if e != arr.max && e != arr.min
