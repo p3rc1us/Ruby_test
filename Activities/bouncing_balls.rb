@@ -1,3 +1,20 @@
+def ball(h, b)
+  return -1 if b == 0 || b == 1
+
+  w = 1.5
+  x = h * b
+  y = 1
+
+  while x >= w
+    y += 2
+    x *= b
+  end
+
+  y
+end
+
+puts ball(3, 0.78)
+
 # def ball(h, b)
 
 # return -1 if b === 0
@@ -45,21 +62,3 @@
 #   end
 
 # puts ball(3, 0.66)
-
-
-def ball(h, b)
-  return -1 if b == 0 || b == 1
-
-  w = 1.5
-  x = h * b
-  y = 1
-
-  while x >= w
-    y += 2
-    x *= b
-  end
-
-  y
-end
-
-puts ball(3, 0.78)

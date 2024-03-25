@@ -1,3 +1,17 @@
+def smallest(arr)
+  arr.each_with_index do | e, i |
+    if e != arr.max && e != arr.min
+      return i
+    end
+  end
+end
+
+puts smallest([590, 36, 45])
+
+
+
+
+
 # def smallest(x)
 #   y = x.min
 #     x.each_with_index do | e, i|
@@ -30,13 +44,3 @@
 # end
 
 # smallest([4, 5, 1])
-
-def smallest(arr)
-  arr.each_with_index do | e, i |
-    if e != arr.max && e != arr.min
-      puts i
-    end
-  end
-end
-
-smallest([590, 36, 45])
