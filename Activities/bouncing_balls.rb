@@ -48,7 +48,7 @@
 
 
 def ball(h, b)
-  return -1 if b == 0 || 1
+  return -1 if b == 0 || b == 1
 
   w = 1.5
   x = h * b
@@ -62,4 +62,4 @@ def ball(h, b)
   y
 end
 
-puts ball(3, 0.99)
+puts ball(3, 0.78)
