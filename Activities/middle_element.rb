@@ -1,4 +1,4 @@
-def smallest(arr)
+def middle(arr)
   arr.each_with_index do | e, i |
     if e != arr.max && e != arr.min
       return i
@@ -6,13 +6,13 @@ def smallest(arr)
   end
 end
 
-puts smallest([590, 36, 45])
+puts middle([590, 36, 45])
 
 
 
 
 #-----------------------------------------------------scratch----------------------------------------------------------#
-# def smallest(x)
+# def middle(x)
 #   y = x.min
 #     x.each_with_index do | e, i|
 #       if y == e
@@ -21,7 +21,7 @@ puts smallest([590, 36, 45])
 #     end
 # end
 
-# smallest([2, 3, 1])
+# middle([2, 3, 1])
 #         # 0, 1, 2
 
   # arr.each_with_index do | e, i |
@@ -31,7 +31,7 @@ puts smallest([590, 36, 45])
 
   # end
 
-# def smallest(arr)
+# def middle(arr)
 #   x =  arr.length.to_f
 #   y = x/2
 #   z = y.ceil
@@ -43,4 +43,4 @@ puts smallest([590, 36, 45])
 
 # end
 
-# smallest([4, 5, 1])
+# middle([4, 5, 1])
