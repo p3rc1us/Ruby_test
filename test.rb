@@ -16,7 +16,7 @@
 #    "goofy"
 #     ]
 #     if phrase.include?(element)
-        # puts "yes nandito si #{element}, nasa pang #{phrase.index(element)} sya"
+				# puts "yes nandito si #{element}, nasa pang #{phrase.index(element)} sya"
 #     else puts "wala siya dito"
 #     end
 # end
@@ -310,7 +310,7 @@
 
 # def killBlanks(array)
 
-    # array.delete("")
+		# array.delete("")
 
 #     array.each do |x|
 #         if x === ""
@@ -579,9 +579,9 @@
 #     puts "#{name} the #{breed} is barking, Arf! Arf!"
 #   end
 
-  # def new_name=(new_name)
-  #   @name = new_name
-  # end
+	# def new_name=(new_name)
+	#   @name = new_name
+	# end
 
 #   def adopt
 #     if @owner == ""
@@ -1250,7 +1250,7 @@
 # attempt 1
 
 # def including(x)
-  # puts x = x[1..-1].include?(x[0]) ? x[0] : false
+	# puts x = x[1..-1].include?(x[0]) ? x[0] : false
 
 #   if x[3..-1].include?(x[0])
 #     puts x[0]
@@ -1286,7 +1286,7 @@
 # attempt in using ewo/ final answer
 
 def impostor(x)
-  puts x = x.each_with_object([]) { |element, container| container.push(element) if x.count(element) == 1 }
+	puts x = x.each_with_object([]) { |element, container| container.push(element) if x.count(element) == 1 }
 end
 
 # impostor([1, 1, 1, 1, 1, 2])
@@ -1294,19 +1294,30 @@ end
 
 # compute the sum without using .sum
 def sum(arr)
-  x = 0
-  arr.each do |d|
-    x += d
-  end
-  x
+	x = 0
+	arr.each do |d|
+		x += d
+	end
+	x
 end
 
 puts sum([1,2,3])
 
-# reverse arrays
+# reverse given array of integer
 
 def reverse(arr)
-  arr.each_with_object([]) { |element, container| container << arr.pop until arr.empty? }.join
+	arr.each_with_object([]) { |element, container| container << arr.pop until arr.empty? }.join
 end
 
 puts reverse([1,2,3,4,5])
+
+# sum first 2 element, return 0 if length 0, return element if length 1
+
+def sum2(arr)
+	return 0 if arr.count == 0
+	return arr[0] if arr.count == 1
+
+	arr[0..1].sum
+end
+
+puts sum2([1])
