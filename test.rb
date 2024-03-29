@@ -1301,7 +1301,7 @@ def sum(arr)
 	x
 end
 
-puts sum([1,2,3])
+# puts sum([1,2,3])
 
 # reverse given array of integer
 
@@ -1309,7 +1309,7 @@ def reverse(arr)
 	arr.each_with_object([]) { |element, container| container << arr.pop until arr.empty? }.join
 end
 
-puts reverse([1,2,3,4,5])
+# puts reverse([1,2,3,4,5])
 
 # sum first 2 element, return 0 if length 0, return element if length 1
 
@@ -1320,4 +1320,12 @@ def sum2(arr)
 	arr[0..1].sum
 end
 
-puts sum2([1])
+# puts sum2([1])
+
+# 23. Write a Ruby program to create a new array of length 4 containing all their elements from two array of integers, length 2.
+
+def combine(x, y)
+	x.concat(y).inspect
+end
+
+puts combine([1,2],[3,4])
