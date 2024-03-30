@@ -12,7 +12,6 @@ end
 
 puts encode("hello")
 
-
 def decode(jeje)
   numerals = {
     'a' => 1,
@@ -23,7 +22,6 @@ def decode(jeje)
   }
 
   modified = numerals.each { |key, value| numerals[key] = "#{value}" }.to_h
-
   jeje.chars.map { |number| modified.key(number) || number }.join
 end
 
