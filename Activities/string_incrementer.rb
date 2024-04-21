@@ -13,4 +13,4 @@ def string_incrementer(str)
 
 end
 
-puts string_incrementer("hello")
+puts string_incrementer("henlo")
