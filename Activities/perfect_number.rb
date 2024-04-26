@@ -16,12 +16,18 @@
 # puts perfect(8128)
 
 def input
-  loop do
+  # loop do
+  #   puts "whats your age?"
+  #   age = gets.chomp().to_i
+  #   if age == 18
+  #     return
+  #   end
+  # end
+  age = 0
+
+  while age != 18
     puts "whats your age?"
     age = gets.chomp().to_i
-    if age == 18
-      return
-    end
   end
 end
 
