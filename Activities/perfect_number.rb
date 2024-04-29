@@ -40,7 +40,7 @@ def two_sum(arr, target)
     if !container.include? element
       container << diff
     else
-      return index, arr.find_index(diff)
+      return "#{element} which is at index #{index} + #{diff} which is at index #{arr.find_index(diff)} is equals to #{target}"
     end
   end
 end
