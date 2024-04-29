@@ -15,7 +15,7 @@
 
 # puts perfect(8128)
 
-def input
+# def input
   # loop do
   #   puts "whats your age?"
   #   age = gets.chomp().to_i
@@ -23,12 +23,26 @@ def input
   #     return
   #   end
   # end
-  age = 0
+#   age = 0
 
-  while age != 18
-    puts "whats your age?"
-    age = gets.chomp().to_i
+#   while age != 18
+#     puts "whats your age?"
+#     age = gets.chomp().to_i
+#   end
+# end
+
+# input
+
+def two_sum(arr, target)
+  container = []
+  arr.each_with_index do | element, index |
+    diff = target - element
+    if !container.include? element
+      container << diff
+    else
+      return index, arr.find_index(diff)
+    end
   end
 end
 
-input
+puts two_sum([1,2,3,4,5,6,7,8,9,10], 10)
