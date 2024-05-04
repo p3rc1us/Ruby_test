@@ -9,4 +9,5 @@ def every_other(str)
   end
 end
 
+puts every_other("did it work?") #.inspect
 puts every_other("did it work, hatdog?")
