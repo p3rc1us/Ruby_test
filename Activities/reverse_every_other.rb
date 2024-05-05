@@ -11,3 +11,5 @@ end
 
 puts every_other("did it work?") #.inspect
 puts every_other("did it work, hatdog?")
+
+# you can use reverse also string.reverse
