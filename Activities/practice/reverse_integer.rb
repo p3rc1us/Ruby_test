@@ -16,6 +16,9 @@ def reverse(x)
     end
   end
   final = box.join
+  y = final.gsub(/[^0-9]/, '')
+  z = final.gsub(/[!^0-9]/, '')
+  o = (z + y.reverse).to_i
 end
 
 puts reverse(-120)
