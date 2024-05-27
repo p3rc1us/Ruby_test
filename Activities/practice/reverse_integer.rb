@@ -7,11 +7,15 @@
 
 
 def reverse(x)
-  y = []
-  y.push(x)
-  y.map { |e| } do
-
-  # z = y.each_with_object([]) { |e, container| container << y.pop() }
+  x = (x.to_s)
+  arr = x.split("")
+  box  = []
+  arr.each_with_index do | e, i|
+    if e != arr[i+1]
+      box << e
+    end
+  end
+  final = box.join
 end
 
-puts reverse(201)
+puts reverse(-120)
