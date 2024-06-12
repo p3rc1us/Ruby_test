@@ -1364,3 +1364,14 @@ def countnum(arr)
 end
 
 # puts countnum([2,"two",2,"two","five",5,5])
+
+
+# 35. Write a Ruby program to check whether every element is a 3 or a 5 in a given array of integers.
+
+def check_if(arr)
+	if arr.first == 3
+		'three'
+	else 'five';end
+end
+
+# puts check_if([3,3,3])
