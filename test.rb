@@ -1340,4 +1340,15 @@ def check(arr)
 	else false;end
 end
 
-puts check([])
+# puts check([])
+
+# 33. Write a Ruby program to check whether the sum of all the 3's of a given array of integers is exactly 9.
+
+def checksum(arr)
+	return "Array must contain 3 elements" if arr.count != 3
+	if arr.sum == 3
+		true
+	else false;end
+end
+
+# puts checksum([1,1,1])
