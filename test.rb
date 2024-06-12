@@ -1328,4 +1328,16 @@ def combine(x, y)
 	x.concat(y).inspect
 end
 
-puts combine([1,2],[3,4])
+# puts combine([1,2],[3,4])
+
+# 19. Write a Ruby program to check whether a given array of integers contains 3 twice, or 5 twice. The array will be length 0, 1, or 2.
+
+def check(arr)
+	if arr.include?(3) && arr.count(3) == 2
+		return true
+	elsif arr.include?(5) && arr.count(5) == 2
+		return true
+	else false;end
+end
+
+puts check([])
