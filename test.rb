@@ -1352,3 +1352,15 @@ def checksum(arr)
 end
 
 # puts checksum([1,1,1])
+
+
+# 34. Write a Ruby program to check whether the number of 2's including "two" is greater than the number of 5's & "five"
+# of a given array of integers.
+
+def countnum(arr)
+	if (arr.count(2) + arr.count("two")) > (arr.count(5) + arr.count("five"))
+		true
+	else false;end
+end
+
+# puts countnum([2,"two",2,"two","five",5,5])
