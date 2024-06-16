@@ -1375,3 +1375,14 @@ def check_if(arr)
 end
 
 # puts check_if([3,3,3])
+
+def calculate(x, z)
+	ActiveRecord::Base.transaction do
+		x = 1
+		y = x * 2
+		z = z - y
+		return z
+	end
+end
+
+puts calculate(5, 20)
