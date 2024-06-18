@@ -22,5 +22,4 @@ end
 
 attendee = Attendee.new(106)
 attendee.issue_pass!(42)
-attendee.revoke_pass!
-print attendee.pass_id.inspect
+print attendee.pass_id?
