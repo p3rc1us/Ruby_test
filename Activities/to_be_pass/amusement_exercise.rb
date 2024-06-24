@@ -31,6 +31,16 @@ class Attendee
       false
     end
   end
+
+  def allowed_to_ride?(required_height)
+    @required_height = required_height
+
+    if @height >= @required_height && @pass_id
+      true
+    else
+      false
+    end
+  end
 end
 
 attendee = Attendee.new(106)
