@@ -18,8 +18,20 @@ class Attendee
   def revoke_pass! # mutate state
     @pass_id = nil
   end
+
+  def has_pass?
+    if @pass_id then true; else false;end
+  end
+
+  def fits_ride?(required_height)
+    @required_height = required_height
+    if @height >= @required_height
+      true
+    else
+      false
+    end
+  end
 end
 
 attendee = Attendee.new(106)
-attendee.issue_pass!(42)
-print attendee.pass_id?
+attendee.has_pass?
