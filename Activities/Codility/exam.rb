@@ -18,16 +18,15 @@
 def arrow(s)
   box = []
 
-  return nil if s !~ /^[<>^v]+$/
+  return "cannot be" if s !~ /^[<>^v]+$/
 
   s.each_char do |x|
-    box << s.count(x)
+    if (s.size - s.count(x)) < s.count(x)
+      return s.size - s.count(x)
+    end
+      box << s.count(x)
   end
   s.size - box.max
 end
 
-puts arrow("<>^^^").inspect
-
-
-
-puts arrow("<v<^^^^^^^^^^^<<^")
+puts arrow("<^^^^^^^^^^^^^^^^^^^^^^asd^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^<<^")
