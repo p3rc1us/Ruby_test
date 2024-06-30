@@ -21,12 +21,12 @@ def arrow(s)
   return "cannot be" if s !~ /^[<>^v]+$/
 
   s.each_char do |x|
-    if (s.size - s.count(x)) < s.count(x)
-      return s.size - s.count(x)
-    end
+    # if (s.size - s.count(x)) < s.count(x)
+    #   return s.size - s.count(x)
+    # end
       box << s.count(x)
   end
   s.size - box.max
 end
 
-puts arrow("<^^^^^^^^^^^^^^^^^^^^^^asd^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^<<^")
+puts arrow("<^^^^^^vvvvvvvvvvvvvvvvvvvv^^^^^<<^")
