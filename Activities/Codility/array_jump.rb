@@ -10,5 +10,5 @@ def out_of_bounce(arr)
   jump_count
 end
 
-puts out_of_bounce([1,0,3,4,5])
+puts out_of_bounce([1,2,3,4,5])
                 #   0,1,2,3,4
